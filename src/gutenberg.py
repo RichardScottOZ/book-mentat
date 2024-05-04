@@ -21,7 +21,7 @@ from llama_index.llms.ollama import Ollama
 #systemctl if you need to stop ollama
 llama = Ollama(
     model="llama2",
-    request_timeout=40.0,
+    request_timeout=4000.0,
 )
 
 from llama_index.core import VectorStoreIndex
