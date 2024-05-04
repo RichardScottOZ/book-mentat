@@ -21,7 +21,7 @@ find "$INPUT_DIR" -type f -exec bash -c '
         EXTENSION="${FILE##*.}"
 
         # Check if the file has an undesirable extension
-        if [[ "$EXTENSION" == "json" || "$EXTENSION" == "db" || "$EXTENSION" == "jpg" || "$EXTENSION" == "opf" ]]; then
+        if [[ "$EXTENSION" == "json" || "$EXTENSION" == "db" || "$EXTENSION" == "jpg" || "$EXTENSION" == "opf" || "$EXTENSION" == "rar"  ]]; then
             # If the file has an undesirable extension, skip it
             echo "Skipping $FILE - undesirable extension"
             return
