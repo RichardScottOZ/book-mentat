@@ -9,7 +9,7 @@ from llama_index.llms.ollama import Ollama
 embedding_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 from llama_index.core import SimpleDirectoryReader
 
-input_path = "/mnt/usb_mount/output"
+input_path = "/mnt/usb_mount/output/Calibre Books"
 
 print("LOADING CALIBRE BOOKS in epub")
 
@@ -28,7 +28,7 @@ documents = loader.load_data()
 print("CHROMA DB CREATION")
 
 # save to disk
-chroma_path = "/mnt/usb_mount/books/Chroma/chroma_db"
+chroma_path = "/mnt/usb_mount/chroma/Calibre Books"
 collection = "calibrebooks"
 
 db = chromadb.PersistentClient(path=chroma_path)
