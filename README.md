@@ -43,6 +43,10 @@ Considering how to analyse book collections, Large Language Model style
 - Calibre https://calibre-ebook.com/
 
 ### Prior Art
+#### epub
+- https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian
+#### comics
+- https://linnk.ai/insight/comics-analysis/multimodal-transformer-for-comics-text-cloze-enhancing-narrative-understanding-in-comics-analysis-f7rPlZEc/
 
 # Approach
 - Clearly will need some sort of Retrieval Augmented Generation
