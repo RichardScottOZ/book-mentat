@@ -21,6 +21,13 @@ for FILE in "$INPUT_DIR"/*; do
     FILENAME=$(basename "$FILE" | cut -d. -f1)
     EXTENSION="${FILE##*.}"
 
+    # Check if the file has an undesirable extension
+    if [[ "$EXTENSION" == "json" || "$EXTENSION" == "db" || "$EXTENSION" == "jpeg" ]]; then
+        # If the file has an undesirable extension, skip it
+        echo "Skipping $FILE - undesirable extension"
+        continue
+    fi
+
     # Check if the file is already an EPUB
     if [[ "$EXTENSION" == "epub" ]]; then
         # If the file is already an EPUB, copy it to the output directory
