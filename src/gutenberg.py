@@ -6,8 +6,9 @@ from llama_index.core import SimpleDirectoryReader
 
 loader = SimpleDirectoryReader(
     input_dir="./.test/",
-    recursive=True,
     required_exts=[".epub"],
+    recursive=True,
+
 )
 
 documents = loader.load_data()
