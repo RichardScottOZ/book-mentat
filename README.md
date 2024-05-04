@@ -10,8 +10,8 @@ Considering how to analyse book collections, Large Language Model style
 ## Library
 - Consider an extensive ebook library that is decades old
 ### Formats
-    - html
     - text
+    - html
     - rtf
     - prc
     - mobipocket
