@@ -21,5 +21,11 @@ llama = Ollama(
 
 query_engine = index.as_query_engine(llm=llama)
 
+print(
+    query_engine.query(
+        "What are the titles of all the books available? Show me the context used to derive your answer."
+    )
+)
+
 
 
