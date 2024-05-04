@@ -44,3 +44,7 @@ Considering how to analyse book collections, Large Language Model style
 
 # Approach
 - Clearly will need some sort of Retrieval Augmented Generation
+
+## Data
+### Calibre Libraries
+- Currently a folder with metadata, db and a folder per 'author' - which is not important, but is the structure
