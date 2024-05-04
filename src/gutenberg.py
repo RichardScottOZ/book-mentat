@@ -8,7 +8,7 @@ loader = SimpleDirectoryReader(
     #input_dir=".test/library/jane-austen/pride-and-prejudice.epub",
     input_dir="./.test/library/jane-austen",
     required_exts=[".epub"],
-    recursive=False,
+    recursive=True,
 
 )
 
