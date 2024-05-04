@@ -48,6 +48,7 @@ Considering how to analyse book collections, Large Language Model style
 - https://github.com/huggingface/cookbook/blob/main/notebooks/en/rag_llamaindex_librarian.ipynb
 #### comics
 - https://linnk.ai/insight/comics-analysis/multimodal-transformer-for-comics-text-cloze-enhancing-narrative-understanding-in-comics-analysis-f7rPlZEc/
+    - paper https://arxiv.org/pdf/2403.03719
 
 # Approach
 - Clearly will need some sort of Retrieval Augmented Generation
