@@ -111,6 +111,9 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 - https://docs.llamaindex.ai/en/v0.9.48/examples/data_connectors/simple_directory_reader.html
 - Vector Stores https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/
 
+### Chroma
+- https://docs.trychroma.com/
+
 ### Tokenisers
 - ?
 
