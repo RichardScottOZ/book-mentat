@@ -11,6 +11,8 @@ from llama_index.core import SimpleDirectoryReader
 
 input_path = "/mnt/usb_mount/output"
 
+print("LOADING CALIBRE BOOKS in epub")
+
 loader = SimpleDirectoryReader(
     input_dir=input_path,
     required_exts=[".epub"],
@@ -23,6 +25,8 @@ documents = loader.load_data()
 #Extending the previous example, if you want to save to disk, simply initialize the Chroma client and pass the directory where you want the data to be saved to.
 #Caution: Chroma makes a best-effort to automatically save data to disk, however multiple in-memory clients can stomp each other's work. As a best practice, only have one client per path running at any given time.
 
+print("CHROMA DB CREATION")
+
 # save to disk
 chroma_path = "/mnt/usb_mount/books/Chroma/chroma_db"
 collection = "calibrebooks"
@@ -32,9 +36,13 @@ chroma_collection = db.get_or_create_collection(collection)
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
+print("CHROMA VECTOR INDEX CREATION")
+
 index = VectorStoreIndex.from_documents(
     documents, storage_context=storage_context, embed_model=embed_model
 )
+
+print("LOAD CHROMA INDEX")
 
 # load from disk
 db2 = chromadb.PersistentClient(path=chroma_path)
@@ -50,6 +58,8 @@ if 1 == 2:
     query_engine = index.as_query_engine()
     response = query_engine.query("What did the author do growing up?")
     display(Markdown(f"<b>{response}</b>"))
+
+print("SAMPLE QUERIES")
 
 llama = Ollama(
     model="llama2",
