@@ -120,6 +120,6 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 
 ### Models
 - Text
-- Multimodal
+- Multimodal - Llava?
 
 
