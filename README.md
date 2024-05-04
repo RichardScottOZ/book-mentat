@@ -5,6 +5,7 @@ Considering how to analyse book collections, Large Language Model style
 - Get all the good spaceship names
 - Finding old stories you have forgotten
 - References found
+- State of the art models for a current mineral exploration problem
 
 # Problem
 ## Library
