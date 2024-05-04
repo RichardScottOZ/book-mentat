@@ -28,3 +28,8 @@ Considering how to analyse book collections, Large Language Model style
 - Diagrams from non-fiction
 - Pictures [or comic strips] from games
 - Actual comics
+
+### Current State
+- Calibre https://calibre-ebook.com/
+
+### Prior Art
