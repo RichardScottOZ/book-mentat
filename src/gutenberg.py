@@ -9,6 +9,8 @@ loader = SimpleDirectoryReader(
     input_dir="./.test/library/jane-austen",
     required_exts=[".epub"],
     recursive=True,
+    exclude_hidden=False,
+
 
 )
 
