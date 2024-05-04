@@ -90,6 +90,7 @@ Considering how to analyse book collections, Large Language Model style
 
 ### ollama
 - install https://ollama.com/download/linux
+    - curl -fsSL https://ollama.com/install.sh | sh
 - operation https://github.com/ollama/ollama/issues/707
 ```bash
 >>> Creating ollama user...
