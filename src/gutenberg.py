@@ -23,6 +23,13 @@ llama = Ollama(
     request_timeout=40.0,
 )
 
+from llama_index.core import VectorStoreIndex
+
+index = VectorStoreIndex.from_documents(
+    documents,
+    embed_model=embedding_model,
+)
+
 query_engine = index.as_query_engine(llm=llama)
 
 print(
