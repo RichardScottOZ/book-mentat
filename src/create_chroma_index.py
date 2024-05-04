@@ -9,9 +9,11 @@ import chromadb
 #Caution: Chroma makes a best-effort to automatically save data to disk, however multiple in-memory clients can stomp each other's work. As a best practice, only have one client per path running at any given time.
 
 # save to disk
+chroma_path = "/mnt/usb_mount/books/Chroma/chroma_db"
+collection = "calibrebooks"
 
-db = chromadb.PersistentClient(path="./chroma_db")
-chroma_collection = db.get_or_create_collection("quickstart")
+db = chromadb.PersistentClient(path=chroma_path)
+chroma_collection = db.get_or_create_collection(collection)
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
@@ -20,8 +22,8 @@ index = VectorStoreIndex.from_documents(
 )
 
 # load from disk
-db2 = chromadb.PersistentClient(path="./chroma_db")
-chroma_collection = db2.get_or_create_collection("quickstart")
+db2 = chromadb.PersistentClient(path=chroma_path)
+chroma_collection = db2.get_or_create_collection(collection)
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 index = VectorStoreIndex.from_vector_store(
     vector_store,
