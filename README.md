@@ -45,6 +45,7 @@ Considering how to analyse book collections, Large Language Model style
 ### Prior Art
 #### epub
 - https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian
+- https://github.com/huggingface/cookbook/blob/main/notebooks/en/rag_llamaindex_librarian.ipynb
 #### comics
 - https://linnk.ai/insight/comics-analysis/multimodal-transformer-for-comics-text-cloze-enhancing-narrative-understanding-in-comics-analysis-f7rPlZEc/
 
