@@ -5,6 +5,19 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 #from IPython.display import Markdown, display
 import chromadb
 
+embedding_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+from llama_index.core import SimpleDirectoryReader
+
+input_path = "/mnt/usb_mount/output"
+
+loader = SimpleDirectoryReader(
+    input_dir="test",
+    required_exts=[".epub"],
+    recursive=True,
+    exclude_hidden=False,
+
+)
+
 #Extending the previous example, if you want to save to disk, simply initialize the Chroma client and pass the directory where you want the data to be saved to.
 #Caution: Chroma makes a best-effort to automatically save data to disk, however multiple in-memory clients can stomp each other's work. As a best practice, only have one client per path running at any given time.
 
