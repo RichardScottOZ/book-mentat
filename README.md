@@ -28,6 +28,8 @@ Considering how to analyse book collections, Large Language Model style
 - Games
 - Academic
     - Papers etc    
+- Code
+    - Many languages
 
 ### Modality
 - Do you want covers?
