@@ -14,7 +14,6 @@ Considering how to analyse book collections, Large Language Model style
     - pdf
     - cbz / cbr
 
-
 ### Origin
     - Not all digital native
 ### Type
@@ -24,7 +23,7 @@ Considering how to analyse book collections, Large Language Model style
 - Academic
     - Papers etc    
 
-## Modality
+### Modality
 - Do you want covers?
 - Diagrams from non-fiction
 - Pictures [or comic strips] from games
