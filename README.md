@@ -89,6 +89,7 @@ Considering how to analyse book collections, Large Language Model style
     - ubuntu has an apt package
 
 ### ollama
+```bash
 >>> Creating ollama user...
 >>> Adding ollama user to render group...
 >>> Adding ollama user to video group...
@@ -99,6 +100,7 @@ Created symlink /etc/systemd/system/default.target.wants/ollama.service → /etc
 >>> The Ollama API is now available at 127.0.0.1:11434.
 >>> Install complete. Run "ollama" from the command line.
 WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
+```
 
 
 ### Tokenisers
