@@ -79,6 +79,9 @@ Considering how to analyse book collections, Large Language Model style
 .txt: 28
 .zip: 17
 ```
+### Calibre
+- use this for conversion 
+    - ubuntu has an apt package
 
 ### Tokenisers
 - ?
@@ -86,3 +89,5 @@ Considering how to analyse book collections, Large Language Model style
 ### Models
 - Text
 - Multimodal
+
+
