@@ -4,6 +4,7 @@ from llama_index.core import StorageContext
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 #from IPython.display import Markdown, display
 import chromadb
+from llama_index.llms.ollama import Ollama
 
 embedding_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 from llama_index.core import SimpleDirectoryReader
@@ -49,4 +50,29 @@ if 1 == 2:
     query_engine = index.as_query_engine()
     response = query_engine.query("What did the author do growing up?")
     display(Markdown(f"<b>{response}</b>"))
+
+llama = Ollama(
+    model="llama2",
+    request_timeout=4000.0,
+)
+
+index = VectorStoreIndex.from_documents(
+    documents,
+    embed_model=embedding_model,
+)
+
+query_engine = index.as_query_engine(llm=llama)
+
+print(
+    query_engine.query(
+        "Please summarise the Christopher Anvil novel Pandora's Legions"
+    )
+)
+
+print(
+    query_engine.query(
+        "What is the name of the main organisation in the Christopher Anvil novel?"
+    )
+)
+
 
