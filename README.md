@@ -50,3 +50,14 @@ Considering how to analyse book collections, Large Language Model style
 ## Data
 ### Calibre Libraries
 - Currently a folder with metadata, db and a folder per 'author' - which is not important, but is the structure
+
+## Technology
+### Storage
+- Is in memory ok if run on a decent server
+
+### Tokenisers
+- ?
+
+### Models
+- Text
+- Multimodal
