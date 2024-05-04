@@ -11,13 +11,14 @@ from llama_index.core import SimpleDirectoryReader
 input_path = "/mnt/usb_mount/output"
 
 loader = SimpleDirectoryReader(
-    input_dir="test",
+    input_dir=input_path,
     required_exts=[".epub"],
     recursive=True,
     exclude_hidden=False,
 
 )
 
+documents = loader.load_data()
 #Extending the previous example, if you want to save to disk, simply initialize the Chroma client and pass the directory where you want the data to be saved to.
 #Caution: Chroma makes a best-effort to automatically save data to disk, however multiple in-memory clients can stomp each other's work. As a best practice, only have one client per path running at any given time.
 
@@ -43,7 +44,9 @@ index = VectorStoreIndex.from_vector_store(
     embed_model=embed_model,
 )
 
-# Query Data from the persisted index
-query_engine = index.as_query_engine()
-response = query_engine.query("What did the author do growing up?")
-display(Markdown(f"<b>{response}</b>"))
+if 1 == 2:
+    # Query Data from the persisted index
+    query_engine = index.as_query_engine()
+    response = query_engine.query("What did the author do growing up?")
+    display(Markdown(f"<b>{response}</b>"))
+
