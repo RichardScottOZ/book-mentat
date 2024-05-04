@@ -54,6 +54,31 @@ Considering how to analyse book collections, Large Language Model style
 ## Technology
 ### Storage
 - Is in memory ok if run on a decent server
+- A books library example
+```bash
+.azw: 12
+.azw3: 234
+.azw4: 2
+.db: 2
+.doc: 1
+.docx: 1
+.epub: 1567
+.htmlz: 6
+.jpg: 9829
+.json: 1
+.lit: 2
+.lrf: 2
+.mobi: 10054
+.opf: 10891
+.original_epub: 20
+.pdb: 9
+.pdf: 102
+.prc: 315
+.rar: 18
+.rtf: 9
+.txt: 28
+.zip: 17
+```
 
 ### Tokenisers
 - ?
