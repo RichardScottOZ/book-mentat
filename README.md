@@ -89,6 +89,8 @@ Considering how to analyse book collections, Large Language Model style
     - ubuntu has an apt package
 
 ### ollama
+- install https://ollama.com/download/linux
+- operation https://github.com/ollama/ollama/issues/707
 ```bash
 >>> Creating ollama user...
 >>> Adding ollama user to render group...
@@ -102,6 +104,9 @@ Created symlink /etc/systemd/system/default.target.wants/ollama.service → /etc
 WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 ```
 
+### Llamaindex
+#### Simple Directory Reader
+- https://docs.llamaindex.ai/en/v0.9.48/examples/data_connectors/simple_directory_reader.html
 
 ### Tokenisers
 - ?
