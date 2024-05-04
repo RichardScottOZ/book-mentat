@@ -18,6 +18,7 @@ documents = loader.load_data()
 
 from llama_index.llms.ollama import Ollama
 #note you need to pull this cmd ollama pull llama2
+#systemctl if you need to stop ollama
 llama = Ollama(
     model="llama2",
     request_timeout=40.0,
