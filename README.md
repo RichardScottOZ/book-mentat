@@ -36,6 +36,7 @@ Considering how to analyse book collections, Large Language Model style
 - Diagrams from non-fiction
 - Pictures [or comic strips] from games
 - Actual comics
+    - 2000 AD, Image, Humble Bundles have CBR/CBZ possibilities
 
 ### Current State
 - Calibre https://calibre-ebook.com/
