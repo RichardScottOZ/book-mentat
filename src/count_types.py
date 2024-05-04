@@ -11,7 +11,7 @@ def count_filetypes(root_dir):
                 file_count[ext.lower()] += 1
     return file_count
 
-root_dir = '/mnt/usb_mount/Calibre Books'
+root_dir = '/mnt/usb_mount/books/Calibre Books'
 file_count = count_filetypes(root_dir)
 for ext, count in sorted(file_count.items()):
     print(f"{ext}: {count}")
