@@ -23,8 +23,8 @@ Considering how to analyse book collections, Large Language Model style
 ### Origin
     - Not all digital native
         - Failure OCR - what is open source state of the art
-        - If on windows - robocopy multithreaded is useful
-        
+        - If on windows - robocopy multithreaded is useful robocopy "C:\Users\bananasplits\OneDrive\Calibre Books" "D:\books\Calibre Books" /MIR /MT:16
+
 ### Type
 - Fiction
 - Non-fiction
