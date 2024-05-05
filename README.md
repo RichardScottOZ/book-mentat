@@ -122,6 +122,7 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
     - is multimodal
 - installation https://docs.trychroma.com/getting-started
 - vector store installation pip install llama-index-vector-stores-chroma
+- embedding speed https://www.youtube.com/watch?v=7FvdwwvqrD4&ab_channel=JohnnyCode
 
 ### Tokenisers
 - ?
