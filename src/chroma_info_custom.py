@@ -50,7 +50,7 @@ for x in range(len(batch["documents"])):
     print(doc['file_name'])
     count += 1
     #break
-    file_dict['file_name'] = 1
+    file_dict[doc['file_name']] = 1
 
 print(count)    
 
