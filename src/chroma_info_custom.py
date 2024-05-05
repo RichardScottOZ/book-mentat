@@ -37,3 +37,6 @@ batch = collection.get(    include=["documents"])
 
 print(len(batch))
 
+for b in batch:
+    print(b)
+
