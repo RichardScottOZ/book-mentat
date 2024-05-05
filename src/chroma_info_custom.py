@@ -28,7 +28,7 @@ print("LOAD CHROMA INDEX CHECK")
 # load from disk
 db2 = chromadb.PersistentClient(path=chroma_path)
 #client = chromadb.PersistentClient(path="/path/to/save/to")
-collection = db2.get_collection(name=collection_name, embedding_function=embedding_model)
+#collection = db2.get_collection(name=collection_name, embedding_function=embedding_model)
 collection = db2.get_collection(name=collection_name, embedding_function=custom)
 
 print(collection.count())
