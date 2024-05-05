@@ -40,15 +40,18 @@ print(len(batch))
 for b in batch:
     print(b)
 
+count = 0
 for x in range(len(batch["ids"])):
     # print(db.get()["metadatas"][x])
     doc = batch["metadatas"][x]
     #source = doc["source"]
-    print(doc)
-    break
+    print(doc['file_name'])
+    count += 1
+
+print(count)    
 
 
-print(batch['documents'] )
+#print(batch['documents'] )
 
 
 
