@@ -55,6 +55,7 @@ for x in range(len(batch["documents"])):
 print(count)    
 
 print(file_dict)
+print(len(file_dict))
 
 #print(batch['documents'] )
 
