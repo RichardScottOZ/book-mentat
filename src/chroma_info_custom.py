@@ -32,5 +32,5 @@ db2 = chromadb.PersistentClient(path=chroma_path)
 collection = db2.get_collection(name=collection_name, embedding_function=custom)
 
 print(collection.count())
-print(len(collection['documents']))
+
 
