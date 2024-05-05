@@ -48,7 +48,8 @@ Considering how to analyse book collections, Large Language Model style
 #### epub
 - https://huggingface.co/learn/cookbook/en/rag_llamaindex_librarian
 - https://github.com/huggingface/cookbook/blob/main/notebooks/en/rag_llamaindex_librarian.ipynb
-- https://github.com/RichardScottOZ/textExtractDemo
+- https://www.bitsgalore.org/2023/03/09/extracting-text-from-epub-files-in-python
+    - https://github.com/RichardScottOZ/textExtractDemo
 #### comics
 - https://linnk.ai/insight/comics-analysis/multimodal-transformer-for-comics-text-cloze-enhancing-narrative-understanding-in-comics-analysis-f7rPlZEc/
     - paper https://arxiv.org/pdf/2403.03719
