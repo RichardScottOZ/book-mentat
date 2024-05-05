@@ -33,4 +33,7 @@ collection = db2.get_collection(name=collection_name, embedding_function=custom)
 
 print(collection.count())
 
+batch = collection.get(    include=["documents"])
+
+print(len(batch))
 
