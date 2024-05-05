@@ -40,3 +40,10 @@ print(len(batch))
 for b in batch:
     print(b)
 
+for d in batch['documenats']:
+    print(d)
+
+print(batch['documents'] )
+
+
+
