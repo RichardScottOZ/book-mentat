@@ -15,21 +15,14 @@ print("LOAD CHROMA INDEX CHECK")
 
 # load from disk
 db2 = chromadb.PersistentClient(path=chroma_path)
-chroma_collection = db2.get_or_create_collection(collection)
-vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-index = VectorStoreIndex.from_vector_store(
-    vector_store,
-    embed_model=embedding_model,
-)
+#client = chromadb.PersistentClient(path="/path/to/save/to")
+collection = db2.get_collection(name="my_collection", embedding_function=embedding_model)
 
-db = db2
+print(collection.count())
+if 1 == 2:
+    vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
+    index = VectorStoreIndex.from_vector_store(
+        vector_store,
+        embed_model=embedding_model,
+    )
 
-print(db.get().keys())
-print(len(db.get()["ids"]))
-
-# Print the list of source files
-for x in range(len(db.get()["ids"])):
-    # print(db.get()["metadatas"][x])
-    doc = db.get()["metadatas"][x]
-    source = doc["source"]
-    print(source)
