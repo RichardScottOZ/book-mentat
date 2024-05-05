@@ -80,7 +80,8 @@ query_engine = index.as_query_engine(llm=llama)
 
 print(
     query_engine.query(
-        "In the Wild Cards series who is Dr Tachyon's favourite person?"
+        #"In the Wild Cards series who is Dr Tachyon's favourite person?"
+        "List me all the names of spaceships you can find in works by A. Bertram Chandler"
     )
 )
 
