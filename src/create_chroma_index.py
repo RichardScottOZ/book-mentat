@@ -51,7 +51,7 @@ chroma_collection = db2.get_or_create_collection(collection)
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 index = VectorStoreIndex.from_vector_store(
     vector_store,
-    embed_model=embed_model,
+    embed_model=embedding_model,
 )
 
 if 1 == 2:
