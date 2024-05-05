@@ -33,15 +33,18 @@ collection = db2.get_collection(name=collection_name, embedding_function=custom)
 
 print(collection.count())
 
-batch = collection.get(    include=["documents"])
+batch = collection.get()
 
 print(len(batch))
 
 for b in batch:
     print(b)
 
-for d in batch['documents']:
-    print(d)
+for x in range(len(batch["ids"])):
+    # print(db.get()["metadatas"][x])
+    doc = batch["metadatas"][x]
+    source = doc["source"]
+    print(source)
 
 print(batch['documents'] )
 
