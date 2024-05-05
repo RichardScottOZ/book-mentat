@@ -45,6 +45,7 @@ for x in range(len(batch["documents"])):
     # print(db.get()["metadatas"][x])
     doc = batch["metadatas"][x]
     #source = doc["source"]
+    print(doc)
     print(doc['file_name'])
     count += 1
     break
