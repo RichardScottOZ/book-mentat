@@ -23,6 +23,8 @@ Considering how to analyse book collections, Large Language Model style
 ### Origin
     - Not all digital native
         - Failure OCR - what is open source state of the art
+        - If on windows - robocopy multithreaded is useful
+        
 ### Type
 - Fiction
 - Non-fiction
