@@ -39,7 +39,7 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store)
 print("CHROMA VECTOR INDEX CREATION")
 
 index = VectorStoreIndex.from_documents(
-    documents, storage_context=storage_context, embed_model=embed_model
+    documents, storage_context=storage_context, embed_model=embedding_model
 )
 
 print("LOAD CHROMA INDEX")
