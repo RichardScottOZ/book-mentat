@@ -45,7 +45,7 @@ for x in range(len(batch["ids"])):
     doc = batch["metadatas"][x]
     #source = doc["source"]
     print(doc)
-    breakk
+    break
 
 
 print(batch['documents'] )
