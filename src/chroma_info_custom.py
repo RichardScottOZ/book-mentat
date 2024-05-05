@@ -41,17 +41,20 @@ for b in batch:
     print(b)
 
 count = 0
+file_dict = {}
 for x in range(len(batch["documents"])):
     # print(db.get()["metadatas"][x])
     doc = batch["metadatas"][x]
     #source = doc["source"]
-    print(doc)
+    #print(doc)
     print(doc['file_name'])
     count += 1
-    break
+    #break
+    file_dict['file_name'] = 1
 
 print(count)    
 
+print(file_dict)
 
 #print(batch['documents'] )
 
