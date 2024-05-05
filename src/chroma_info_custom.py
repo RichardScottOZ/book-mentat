@@ -74,10 +74,7 @@ llama = Ollama(
     request_timeout=4000.0,
 )
 
-index = VectorStoreIndex.from_documents(
-    documents,
-    embed_model=embedding_model,
-)
+
 
 query_engine = index.as_query_engine(llm=llama)
 
