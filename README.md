@@ -96,6 +96,7 @@ Considering how to analyse book collections, Large Language Model style
 ### ollama
 - install https://ollama.com/download/linux
     - curl -fsSL https://ollama.com/install.sh | sh
+- models: https://ollama.com/library    
 - operation https://github.com/ollama/ollama/issues/707
 ```bash
 >>> Creating ollama user...
@@ -128,5 +129,6 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 ### Models
 - Text
 - Multimodal - Llava?
+- https://ollama.com/library
 
 
