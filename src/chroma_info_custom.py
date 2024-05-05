@@ -43,8 +43,10 @@ for b in batch:
 for x in range(len(batch["ids"])):
     # print(db.get()["metadatas"][x])
     doc = batch["metadatas"][x]
-    source = doc["source"]
-    print(source)
+    #source = doc["source"]
+    print(doc)
+    breakk
+
 
 print(batch['documents'] )
 
