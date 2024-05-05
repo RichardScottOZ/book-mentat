@@ -41,7 +41,7 @@ for b in batch:
     print(b)
 
 count = 0
-for x in range(len(batch["ids"])):
+for x in range(len(batch["documents"])):
     # print(db.get()["metadatas"][x])
     doc = batch["metadatas"][x]
     #source = doc["source"]
