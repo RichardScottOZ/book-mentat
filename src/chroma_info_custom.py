@@ -57,6 +57,10 @@ print(count)
 print(file_dict)
 print(len(file_dict))
 
+sorted_dict = dict(sorted(file_dict.items()))
+for key in sorted_dict:
+    print(key)
+
 #print(batch['documents'] )
 
 vector_store = ChromaVectorStore(chroma_collection=collection)
