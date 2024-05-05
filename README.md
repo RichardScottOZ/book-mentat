@@ -113,6 +113,7 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 ### Llamaindex
 #### Simple Directory Reader
 - https://docs.llamaindex.ai/en/v0.9.48/examples/data_connectors/simple_directory_reader.html
+- Readers https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-file
 - Vector Stores https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/
 
 ### Chroma
