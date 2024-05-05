@@ -47,6 +47,7 @@ for x in range(len(batch["documents"])):
     #source = doc["source"]
     print(doc['file_name'])
     count += 1
+    break
 
 print(count)    
 
