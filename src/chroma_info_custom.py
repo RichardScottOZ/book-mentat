@@ -55,7 +55,7 @@ print(count)
 
 #print(batch['documents'] )
 
-vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
+vector_store = ChromaVectorStore(chroma_collection=collection)
 index = VectorStoreIndex.from_vector_store(
     vector_store,
     embed_model=embedding_model,
@@ -83,15 +83,10 @@ query_engine = index.as_query_engine(llm=llama)
 
 print(
     query_engine.query(
-        "Please summarise the Christopher Anvil novel Pandora's Legions"
+        "In the Wild Cards series who is Dr Tachyon's favourite person?"
     )
 )
 
-print(
-    query_engine.query(
-        "What is the name of the main organisation in the Christopher Anvil novel?"
-    )
-)
 
 
 
