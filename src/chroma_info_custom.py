@@ -12,6 +12,9 @@ embedding_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 chroma_path = "/mnt/usb_mount/chroma/Calibre Books"
 collection_name = "calibrebooks"
 
+# note on custom embed class to get around signature error
+# https://stackoverflow.com/questions/77555461/facing-issue-while-running-chroma-from-documents-function
+
 from chromadb.utils import embedding_functions
 from chromadb import Documents, EmbeddingFunction, Embeddings
 class MyEmbeddingFunction(EmbeddingFunction[Documents]):
