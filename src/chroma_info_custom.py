@@ -96,9 +96,9 @@ print(
         #"In the Wild Cards series who is Dr Tachyon's favourite person?"
         #"List me all the names of spaceships you can find in works by A. Bertram Chandler"
         #"List all the main character aces in the novel Aces Abroad"
-        #"Give me the names of all the lighthugger ships in works by Alastair Reynolds"
+        "Give me the names of all the lighthugger ships in works by Alastair Reynolds"
         #"List all the lighthuggers in the novel ABsolution Gap"
-        "Tell me about Neville Clavain's appearances in the Revelation Space books and stories"
+        Tell me about Neville Clavain's appearances in the Revelation Space books and stories"
     )
 )
 
