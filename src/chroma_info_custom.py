@@ -83,7 +83,8 @@ if 1 == 2:
 print("SAMPLE QUERIES")
 
 llama = Ollama(
-    model="llama2",
+    Emodel="llama2",
+    model="llama3",
     request_timeout=4000.0,
 )
 
