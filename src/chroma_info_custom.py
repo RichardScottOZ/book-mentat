@@ -100,7 +100,8 @@ print(
         #"Give me the names of all the lighthugger ships in works by Alastair Reynolds"
         #"List all the lighthuggers in the novel ABsolution Gap"
         #"Tell me about Neville Clavain's appearances in the Revelation Space books and stories"
-        "What battles did Druss the Legend fight in?"
+        #"What battles did Druss the Legend fight in?"
+        "Please explain the story Border Guards by Greg Egan"
     )
 )
 
