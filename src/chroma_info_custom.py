@@ -1,3 +1,5 @@
+import sys
+
 model = 'llama2'
 strq = sys.argv[2]
 
