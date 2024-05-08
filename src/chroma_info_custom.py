@@ -1,8 +1,8 @@
 import sys
 
-model = 'llama2'
+model = sys.argv[1]
 strq = sys.argv[2]
-
+print("mode:",model,"query:",strq)
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
@@ -87,8 +87,8 @@ if 1 == 2:
 print("SAMPLE QUERIES")
 
 llama = Ollama(
-    model="llama2",
-    #model=model,
+    #model="llama2",
+    model=model,
     request_timeout=4000.0,
 )
 
@@ -105,8 +105,8 @@ print(
         #"List all the lighthuggers in the novel ABsolution Gap"
         #"Tell me about Neville Clavain's appearances in the Revelation Space books and stories"
         #"What battles did Druss the Legend fight in?"
-        "Please explain the story Border Guards by Greg Egan"
-        #strq
+        #"Please explain the story Border Guards by Greg Egan"
+        strq
     )
 )
 
