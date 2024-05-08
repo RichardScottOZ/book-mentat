@@ -87,8 +87,8 @@ if 1 == 2:
 print("SAMPLE QUERIES")
 
 llama = Ollama(
-    #Emodel="llama2",
-    model=model,
+    model="llama2",
+    #model=model,
     request_timeout=4000.0,
 )
 
@@ -105,8 +105,8 @@ print(
         #"List all the lighthuggers in the novel ABsolution Gap"
         #"Tell me about Neville Clavain's appearances in the Revelation Space books and stories"
         #"What battles did Druss the Legend fight in?"
-        #"Please explain the story Border Guards by Greg Egan"
-        strq
+        "Please explain the story Border Guards by Greg Egan"
+        #strq
     )
 )
 
