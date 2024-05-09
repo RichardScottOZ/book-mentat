@@ -130,11 +130,13 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 ### Models
 - Text
 - Multimodal - Llava?
-- https://ollama.com/library
+- Model Storage https://github.com/ollama/ollama/issues/1737
 
+- https://ollama.com/library
 - ollama pull llama2
 - ollama run llama3
 - etc
+## Ollama
 
 
 
