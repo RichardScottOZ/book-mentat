@@ -138,3 +138,12 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 
 
 
+# Errors
+## bind address already in use
+- https://github.com/ollama/ollama/issues/707
+- Hey all, not seeing ollama in the output of lsof could be a permissions issue. When you install ollama on linux via the install script it creates a service user for the background process. You may need to stop the process via systemctl in that case.
+
+Here is some troubleshooting steps that will hopefully help:
+
+Stop the background service: sudo systemctl stop ollama
+Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
