@@ -43,6 +43,32 @@ print(collection.count())
 
 existing_count = col.count()
 batch_size = 10
+file_dict = {}
+count = 0
 for i in range(0, existing_count, batch_size):
     batch = col.get(include=["metadatas", "documents", "embeddings"], limit=batch_size, offset=i)
+
+    for b in batch:
+        print(b)
+
+    
+    
+    for x in range(len(batch["documents"])):
+        # print(db.get()["metadatas"][x])
+        doc = batch["metadatas"][x]
+        #source = doc["source"]
+        #print(doc)
+        print(doc['file_name'])
+        count += 1
+        #break
+        file_dict[doc['file_name']] = 1
+
+    print(count)    
+
+    print(file_dict)
+    print(len(file_dict))
+
+sorted_dict = dict(sorted(file_dict.items()))
+for key in sorted_dict:
+    print(key)    
 
