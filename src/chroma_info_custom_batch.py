@@ -73,3 +73,5 @@ sorted_dict = dict(sorted(file_dict.items()))
 for key in sorted_dict:
     print(key)    
 
+print(len(sorted_dict))    
+
