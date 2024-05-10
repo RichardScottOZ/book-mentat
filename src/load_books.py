@@ -26,3 +26,5 @@ documents = loader.load_data()
 # work out where we are up to
 for d in documents:
     print(d)
+
+print(len(documents))    
