@@ -67,11 +67,11 @@ for i in range(0, existing_count, batch_size):
 
     print(file_dict)
     print(len(file_dict))
-    break
+    #break
 
 sorted_dict = dict(sorted(file_dict.items()))
 for key in sorted_dict:
     print(key)    
 
-print(len(sorted_dict))    
+print(len(sorted_dict), existing_count)    
 
