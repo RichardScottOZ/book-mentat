@@ -46,7 +46,7 @@ batch_size = 10
 file_dict = {}
 count = 0
 for i in range(0, existing_count, batch_size):
-    batch = col.get(include=["metadatas", "documents", "embeddings"], limit=batch_size, offset=i)
+    batch = collection.get(include=["metadatas", "documents", "embeddings"], limit=batch_size, offset=i)
 
     for b in batch:
         print(b)
