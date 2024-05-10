@@ -75,3 +75,7 @@ for key in sorted_dict:
 
 print(len(sorted_dict), existing_count)    
 
+import pickle
+with open('book_dict.pkl','wb') as f:
+    pickle.dump(sorted_dict, f)
+
