@@ -41,7 +41,7 @@ collection = db2.get_collection(name=collection_name, embedding_function=custom)
 print(collection.count())
 
 
-existing_count = col.count()
+existing_count = collection.count()
 batch_size = 10
 file_dict = {}
 count = 0
