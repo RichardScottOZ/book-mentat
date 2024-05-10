@@ -42,7 +42,7 @@ print(collection.count())
 
 
 existing_count = collection.count()
-batch_size = 20000
+batch_size = 200000
 file_dict = {}
 count = 0
 for i in range(0, existing_count, batch_size):
