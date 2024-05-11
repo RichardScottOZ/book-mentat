@@ -76,6 +76,14 @@ new_nodes = get_retrieved_nodes(
     with_reranker=False,
 )
 
+visualize_retrieved_nodes(new_nodes)
+
+new_nodes = get_retrieved_nodes(
+    "What was the main organisation in Pandora's Legions by Christopher Anvil?",
+    vector_top_k=10,
+    reranker_top_n=3,
+    with_reranker=True,
+)
 print("LOAD CHROMA INDEX CHECK")
 
 # load from disk

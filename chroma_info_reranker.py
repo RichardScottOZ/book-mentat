@@ -5,7 +5,6 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core.postprocessor import LLMRerank
-from llama_index.llms.openai import OpenAI
 #from IPython.display import Markdown, display
 
 from llama_index.vector_stores.chroma import ChromaVectorStore
@@ -15,7 +14,12 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import chromadb
 from llama_index.llms.ollama import Ollama
 
-import sys
+from llama_index.core.retrievers import VectorIndexRetriever
+from llama_index.core import QueryBundle
+import pandas as pd
+#from IPython.display import display, HTML
+
+
 
 model = sys.argv[1]
 strq = sys.argv[2]
@@ -39,13 +43,45 @@ class MyEmbeddingFunction(EmbeddingFunction[Documents]):
 
 custom = MyEmbeddingFunction()
 
+def get_retrieved_nodes(
+    query_str, vector_top_k=10, reranker_top_n=3, with_reranker=False
+):
+    query_bundle = QueryBundle(query_str)
+    # configure retriever
+    retriever = VectorIndexRetriever(
+        index=index,
+        similarity_top_k=vector_top_k,
+    )
+    retrieved_nodes = retriever.retrieve(query_bundle)
 
-print("LOAD CHROMA INDEX CHECK")
+    if with_reranker:
+        # configure reranker
+        reranker = LLMRerank(
+            choice_batch_size=5,
+            top_n=reranker_top_n,
+        )
+        retrieved_nodes = reranker.postprocess_nodes(
+            retrieved_nodes, query_bundle
+        )
+
+    return retrieved_nodes
+
+def pretty_print(df):
+    return display(HTML(df.to_html().replace("\\n", "<br>")))
+
+
+def visualize_retrieved_nodes(nodes) -> None:
+    result_dicts = []
+    for node in nodes:
+        result_dict = {"Score": node.score, "Text": node.node.get_text()}
+        result_dicts.append(result_dict)
+
+    #pretty_print(pd.DataFrame(result_dicts))
+    print(pd.DataFrame(result_dicts))
+
 
 # load from disk
 db2 = chromadb.PersistentClient(path=chroma_path)
-#client = chromadb.PersistentClient(path="/path/to/save/to")
-#collection = db2.get_collection(name=collection_name, embedding_function=embedding_model)
 collection = db2.get_collection(name=collection_name, embedding_function=custom)
 
 print(collection.count())
@@ -55,3 +91,22 @@ index = VectorStoreIndex.from_vector_store(
     vector_store,
     embed_model=embedding_model,
 )
+
+new_nodes = get_retrieved_nodes(
+    "What was the main organisation in Pandora's Legions by Christopher Anvil?",
+    vector_top_k=3,
+    with_reranker=False,
+)
+
+visualize_retrieved_nodes(new_nodes)
+
+new_nodes = get_retrieved_nodes(
+    "What was the main organisation in Pandora's Legions by Christopher Anvil?",
+    vector_top_k=10,
+    reranker_top_n=3,
+    with_reranker=True,
+)
+# note on custom embed class to get around signature error
+# https://stackoverflow.com/questions/77555461/facing-issue-while-running-chroma-from-documents-function
+
+
