@@ -25,4 +25,5 @@ print("BOOK DICT SIZE:",len(book_dict), "FILE LIST SIZE:",len(file_list), "NEED 
 os.makedirs(output_path), exist_ok=True)
 
 for n in need_list:
+    print("copying:",n)
     shutil.copy(os.path.join(input_path,n),os.path.join(output_path,n))
