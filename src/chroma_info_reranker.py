@@ -41,7 +41,7 @@ class MyEmbeddingFunction(EmbeddingFunction[Documents]):
 custom = MyEmbeddingFunction()
 
 def get_retrieved_nodes(
-    query_str, vector_top_k=10, reranker_top_n=3, with_reranker=False, llm = llama
+    query_str, vector_top_k=10, reranker_top_n=3, with_reranker=False, llm
 ):
     query_bundle = QueryBundle(query_str)
     # configure retriever
@@ -98,7 +98,7 @@ new_nodes = get_retrieved_nodes(
     "What was the main organisation in Pandora's Legions by Christopher Anvil?",
     vector_top_k=3,
     with_reranker=False,
-    llm = llama,
+   
 )
 
 visualize_retrieved_nodes(new_nodes)
@@ -108,6 +108,7 @@ new_nodes = get_retrieved_nodes(
     vector_top_k=10,
     reranker_top_n=3,
     with_reranker=True,
+    llama
 )
 # note on custom embed class to get around signature error
 # https://stackoverflow.com/questions/77555461/facing-issue-while-running-chroma-from-documents-function
