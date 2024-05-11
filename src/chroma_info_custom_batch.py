@@ -50,8 +50,6 @@ for i in range(0, existing_count, batch_size):
 
     for b in batch:
         print(b)
-
-    
     
     for x in range(len(batch["documents"])):
         # print(db.get()["metadatas"][x])
