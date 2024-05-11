@@ -1,6 +1,6 @@
 import pickle
 with open('book_dict.pkl','rb') as f:
-    book_dict = pickle.load(sorted_dict, f)
+    book_dict = pickle.load(f)
 
 input_path = "/mnt/usb_mount/output/Calibre Books"
 file_list = []
