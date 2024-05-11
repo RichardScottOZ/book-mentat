@@ -54,7 +54,7 @@ def get_retrieved_nodes(
     if with_reranker:
         # configure reranker
         reranker = LLMRerank(
-            llm = llm
+            llm = llm,
             choice_batch_size=5,
             top_n=reranker_top_n,
         )
