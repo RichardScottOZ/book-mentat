@@ -14,3 +14,5 @@ for b in file_list:
         pass
     else:
         print("STILL NEED:",b)
+
+print("BOOK DICT SIZE:",len(book_dict))        
