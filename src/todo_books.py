@@ -22,7 +22,7 @@ for b in file_list:
 
 print("BOOK DICT SIZE:",len(book_dict), "FILE LIST SIZE:",len(file_list), "NEED LIST SIZE:",len(need_list))    
 
-os.makedirs(output_path), exist_ok=True)
+os.makedirs(output_path, exist_ok=True)
 
 for n in need_list:
     print("copying:",n)
