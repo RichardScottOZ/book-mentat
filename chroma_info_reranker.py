@@ -10,16 +10,13 @@ from llama_index.core.postprocessor import LLMRerank
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-#from IPython.display import Markdown, display
+#from IPython.display import Markdown, display, HTML
 import chromadb
 from llama_index.llms.ollama import Ollama
 
 from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core import QueryBundle
 import pandas as pd
-#from IPython.display import display, HTML
-
-
 
 model = sys.argv[1]
 strq = sys.argv[2]
@@ -69,7 +66,6 @@ def get_retrieved_nodes(
 def pretty_print(df):
     return display(HTML(df.to_html().replace("\\n", "<br>")))
 
-
 def visualize_retrieved_nodes(nodes) -> None:
     result_dicts = []
     for node in nodes:
@@ -78,7 +74,6 @@ def visualize_retrieved_nodes(nodes) -> None:
 
     #pretty_print(pd.DataFrame(result_dicts))
     print(pd.DataFrame(result_dicts))
-
 
 # load from disk
 db2 = chromadb.PersistentClient(path=chroma_path)
