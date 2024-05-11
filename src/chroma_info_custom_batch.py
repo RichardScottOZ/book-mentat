@@ -70,6 +70,11 @@ def visualize_retrieved_nodes(nodes) -> None:
     #pretty_print(pd.DataFrame(result_dicts))
     print(pd.DataFrame(result_dicts))
 
+new_nodes = get_retrieved_nodes(
+    "What was the main organisation in Pandora's Legions by Christopher Anvil?",
+    vector_top_k=3,
+    with_reranker=False,
+)
 
 print("LOAD CHROMA INDEX CHECK")
 
