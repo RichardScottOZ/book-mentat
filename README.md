@@ -117,6 +117,9 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 - Readers https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-file
 - Vector Stores https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/
 
+#### Reranker
+- https://docs.llamaindex.ai/en/stable/examples/node_postprocessor/LLMReranker-Gatsby/
+
 ### Chroma
 - https://docs.trychroma.com/
     - is multimodal
