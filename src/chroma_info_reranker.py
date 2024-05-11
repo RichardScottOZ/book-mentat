@@ -96,7 +96,7 @@ index = VectorStoreIndex.from_vector_store(
 
 
 new_nodes = get_retrieved_nodes(
-    "What was the main organisation in Pandora's Legions by Christopher Anvil?",
+    strq,
     vector_top_k=3,
     with_reranker=False,
    
@@ -105,7 +105,7 @@ new_nodes = get_retrieved_nodes(
 visualize_retrieved_nodes(new_nodes)
 
 new_nodes = get_retrieved_nodes(
-    "What was the main organisation in Pandora's Legions by Christopher Anvil?",
+    strq,
     vector_top_k=10,
     reranker_top_n=3,
     with_reranker=True,
