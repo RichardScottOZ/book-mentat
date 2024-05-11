@@ -4,7 +4,7 @@ import os
 with open('book_dict.pkl','rb') as f:
     book_dict = pickle.load(f)
 
-#input_path = "/mnt/usb_mount/output/Calibre Books"
+input_path = "/mnt/usb_mount/output/Calibre Books"
 output_path = "/mnt/usb_mount/todo/Calibre Books"
 
 file_list = []
