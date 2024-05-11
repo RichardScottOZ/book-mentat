@@ -41,7 +41,7 @@ class MyEmbeddingFunction(EmbeddingFunction[Documents]):
 custom = MyEmbeddingFunction()
 
 def get_retrieved_nodes(
-    query_str, vector_top_k=10, reranker_top_n=3, with_reranker=False
+    query_str, vector_top_k=10, reranker_top_n=3, with_reranker=False, llm = llama
 ):
     query_bundle = QueryBundle(query_str)
     # configure retriever
@@ -54,6 +54,7 @@ def get_retrieved_nodes(
     if with_reranker:
         # configure reranker
         reranker = LLMRerank(
+            llm = llm
             choice_batch_size=5,
             top_n=reranker_top_n,
         )
@@ -87,10 +88,17 @@ index = VectorStoreIndex.from_vector_store(
     embed_model=embedding_model,
 )
 
+llama = Ollama(
+    #model="llama2",
+    model=model,
+    request_timeout=4000.0,
+)
+
 new_nodes = get_retrieved_nodes(
     "What was the main organisation in Pandora's Legions by Christopher Anvil?",
     vector_top_k=3,
     with_reranker=False,
+    llm = llama,
 )
 
 visualize_retrieved_nodes(new_nodes)
