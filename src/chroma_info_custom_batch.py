@@ -42,7 +42,7 @@ print(collection.count())
 
 
 existing_count = collection.count()
-batch_size = 400
+batch_size = 400000
 file_dict = {}
 count = 0
 for i in range(0, existing_count, batch_size):
@@ -65,7 +65,7 @@ for i in range(0, existing_count, batch_size):
 
     print(file_dict)
     print(len(file_dict))
-    break
+    #break
 
 sorted_dict = dict(sorted(file_dict.items()))
 for key in sorted_dict:
