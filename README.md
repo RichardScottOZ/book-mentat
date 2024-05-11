@@ -149,3 +149,7 @@ Here is some troubleshooting steps that will hopefully help:
 
 Stop the background service: sudo systemctl stop ollama
 Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
+
+# Embeddings
+- multi GPU approach
+- https://github.com/UKPLab/sentence-transformers/blob/master/examples/applications/computing-embeddings/computing_embeddings_multi_gpu.py
