@@ -166,4 +166,5 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 
 # Layout
 - Llava?
-- https://huggingface.co/docs/transformers/en/model_doc/layoutlm
+- layoutlm https://huggingface.co/docs/transformers/en/model_doc/layoutlm
+- grobid https://grobid.readthedocs.io/en/latest/Introduction/
