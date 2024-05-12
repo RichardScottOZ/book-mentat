@@ -165,6 +165,7 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 - sqlite3 linux package can be used to check pragma basics etc.
 
 # Layout
+- discussion https://www.reddit.com/r/LocalLLaMA/comments/1brk3qo/pdf_to_json_for_rag_through_multimodal_models/
 - Llava?
 - layoutlm https://huggingface.co/docs/transformers/en/model_doc/layoutlm
 - grobid https://grobid.readthedocs.io/en/latest/Introduction/
