@@ -163,3 +163,7 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 # Tips
 - https://thenewstack.io/exploring-chroma-the-open-source-vector-database-for-llms/
 - sqlite3 linux package can be used to check pragma basics etc.
+
+# Layout
+- Llava?
+- https://huggingface.co/docs/transformers/en/model_doc/layoutlm
