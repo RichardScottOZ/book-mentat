@@ -181,4 +181,5 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 - PDFMiner.six
 - Camelot
 - PyPDF2
+- pikepdf https://github.com/RichardScottOZ/pikepdf
 
