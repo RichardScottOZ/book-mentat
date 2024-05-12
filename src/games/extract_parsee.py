@@ -30,7 +30,7 @@ for root, dirs, files in os.walk(input_path):
             #break
 
     #break
-print("FINISHED: and there were ",counterror failures)    
+print("FINISHED: and there were ",counterror, " failures")    
 #If you are processing a PDF that needs OCR but no elements or just very few are being returned, you can force OCR like this (replace the paths):
 
 #elements = get_elements_from_pdf("FILE_PATH", force_ocr=True)
