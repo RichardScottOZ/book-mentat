@@ -23,7 +23,7 @@ for root, dirs, files in os.walk(input_path):
                 newfile = file + '.error'
                 print("ERROR:",file)
                 counterror += 1
-                with open(os.path.join(output_path,newfile),'w') as f:
+                with open(os.path.join(output_path,newfile),'wb') as f:
                     pickle.dump('error', f)
 
                 
