@@ -13,13 +13,13 @@ for root, dirs, files in os.walk(input_path):
     for file in files:
         if '.pdf' in file:
             print(file)
-            newfile = file + .'pkl'
+            newfile = file + '.pkl'
             try:
                 elements = get_elements_from_pdf(os.path.join(root,file))
                 with open(os.path.join(output_path,newfile,'.pkl'),'wb') as f:
                     pickle.dump(elements, f)
             except Exception as parseE:
-                newfile = file + .'error'
+                newfile = file + '.error'
                 print("ERROR:",file)
                 counterror += 1
                 with open(os.path.join(output_path,newfile),'wb') as f:
