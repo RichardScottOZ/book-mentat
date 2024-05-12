@@ -4,12 +4,14 @@ import pickle
 from multiprocessing import Pool
 
 def process_pdf(file):
+    from pdf_reader import get_elements_from_pdf
     output_path = "/mnt/usb_mount/games/parsee"
-    print(file)
+    print("FILE PROCESSING:",file)
     newfile = file + '.pkl'
 
     try:
         elements = get_elements_from_pdf(file)
+        print("NEWFILE OUTPUT:",newfile)
         with open(newfile, 'wb') as f:
             pickle.dump(elements, f)
     except Exception as parseE:
