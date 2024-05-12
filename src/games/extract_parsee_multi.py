@@ -14,7 +14,7 @@ def process_pdf(file):
         print(parseE)
         newfile = file + '.error'
         print("ERROR:", file)
-        with open(os.path.join(output_path, newfile), 'w') as f:
+        with open(os.path.join(output_path, newfile), 'wb') as f:
             pickle.dump('error', f)
 
 if __name__ == "__main__":
