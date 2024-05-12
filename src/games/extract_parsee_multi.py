@@ -11,6 +11,7 @@ def process_pdf(file):
         with open(os.path.join(output_path, newfile), 'wb') as f:
             pickle.dump(elements, f)
     except Exception as parseE:
+        print(parseE)
         newfile = file + '.error'
         print("ERROR:", file)
         with open(os.path.join(output_path, newfile), 'w') as f:
