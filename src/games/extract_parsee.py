@@ -1,7 +1,7 @@
 import os
 from pdf_reader import get_elements_from_pdf
 
-input_path = "/mnt/usb_mount/output/Calibre Books"
+input_path = "/mnt/usb_mount/books/Calibre Library"
 for root, dirs, files in os.walk(input_path):
     for file in files:
         if '.pdf' in file:
