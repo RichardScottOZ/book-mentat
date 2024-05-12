@@ -4,10 +4,11 @@ import pickle
 from multiprocessing import Pool
 
 def process_pdf(file):
+    output_path = "/mnt/usb_mount/games/parsee"
     print(file)
     newfile = file + '.pkl'
     try:
-        elements = get_elements_from_pdf(os.path.join(root, file))
+        elements = get_elements_from_pdf(file)
         with open(os.path.join(output_path, newfile), 'wb') as f:
             pickle.dump(elements, f)
     except Exception as parseE:
@@ -27,7 +28,7 @@ if __name__ == "__main__":
     for root, dirs, files in os.walk(input_path):
         for file in files:
             if file.endswith('.pdf'):
-                pool.apply_async(process_pdf, args=(file,))
+                pool.apply_async(process_pdf, args=(os.path.join(root,file),))
 
     pool.close()  # Close the pool, indicating that no more tasks will be added
     pool.join()  # Wait for all worker processes to complete
