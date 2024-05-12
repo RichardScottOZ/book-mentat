@@ -20,7 +20,7 @@ def process_pdf(file):
         newfile = file + '.error'
         print("ERROR:", file)
         with open(os.path.join(output_path,os.path.basename(newfile)), 'wb') as f:
-            pickle.dump('error', f)
+            pickle.dump(str(parsee), f)
 
 if __name__ == "__main__":
     input_path = "/mnt/usb_mount/books/Calibre Library"
