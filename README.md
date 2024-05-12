@@ -170,3 +170,5 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 - layoutlm https://huggingface.co/docs/transformers/en/model_doc/layoutlm
 - grobid https://grobid.readthedocs.io/en/latest/Introduction/
 - LlamaParse https://medium.com/@salujav4/parsing-pdfs-text-image-and-tables-for-rag-based-applications-using-llamaparse-llamaindex-0f4c5ed50fb7
+    - https://colab.research.google.com/drive/1aUPywCH92XLNpdjkmXz3ff8H-QnT2JHZ?usp=sharing
+- Unstructured https://github.com/Unstructured-IO
