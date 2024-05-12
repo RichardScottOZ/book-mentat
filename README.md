@@ -176,3 +176,9 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 - https://github.com/parsee-ai/parsee-pdf-reader
 - TableTransformer
 
+## PDF
+- PyMuPDF
+- PDFMiner.six
+- Camelot
+- PyPDF2
+
