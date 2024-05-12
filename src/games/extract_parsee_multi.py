@@ -13,8 +13,8 @@ def process_pdf(file):
     except Exception as parseE:
         newfile = file + '.error'
         print("ERROR:", file)
-        with open(os.path.join(output_path, newfile), 'wb') as f:
-            pickle.dump(parseE, f)
+        with open(os.path.join(output_path, newfile), 'w') as f:
+            pickle.dump('error', f)
 
 if __name__ == "__main__":
     input_path = "/mnt/usb_mount/books/Calibre Library"
