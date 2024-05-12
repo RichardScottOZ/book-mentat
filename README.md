@@ -183,3 +183,6 @@ Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
 - PyPDF2
 - pikepdf https://github.com/RichardScottOZ/pikepdf
 
+## OCR
+- tesseract https://tesseract-ocr.github.io/tessdoc/Installation.html
+
