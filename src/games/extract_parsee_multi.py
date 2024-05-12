@@ -11,7 +11,7 @@ def process_pdf(file):
 
     try:
         elements = get_elements_from_pdf(file)
-        print(elements)
+        #print(elements)
         print("NEWFILE OUTPUT:",newfile)
         with open(os.path.join(output_path,os.path.basename(newfile)), 'wb') as f:
             pickle.dump(elements, f)
