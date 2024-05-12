@@ -7,6 +7,7 @@ for root, dirs, files in os.walk(input_path):
         if '.pdf' in file:
             print(file)
             elements = get_elements_from_pdf(os.path.join(root,file))
+            print(elements)
             break
 
     #break
