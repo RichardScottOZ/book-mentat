@@ -19,6 +19,7 @@ for root, dirs, files in os.walk(input_path):
                 with open(os.path.join(output_path,newfile,'.pkl'),'wb') as f:
                     pickle.dump(elements, f)
             except Exception as parseE:
+                print(parseE)
                 newfile = file + '.error'
                 print("ERROR:",file)
                 counterror += 1
