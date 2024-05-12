@@ -12,7 +12,7 @@ def process_pdf(file):
     try:
         elements = get_elements_from_pdf(file)
         #print(elements)
-        print("NEWFILE OUTPUT:",newfile)
+        print("NEWFILE OUTPUT:",output_path,os.path.basename(newfile))
         with open(os.path.join(output_path,os.path.basename(newfile)), 'wb') as f:
             pickle.dump(elements, f)
     except Exception as parseE:
