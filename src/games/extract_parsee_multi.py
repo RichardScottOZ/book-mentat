@@ -7,15 +7,16 @@ def process_pdf(file):
     output_path = "/mnt/usb_mount/games/parsee"
     print(file)
     newfile = file + '.pkl'
+
     try:
         elements = get_elements_from_pdf(file)
-        with open(os.path.join(output_path, newfile), 'wb') as f:
+        with open(newfile, 'wb') as f:
             pickle.dump(elements, f)
     except Exception as parseE:
         print(parseE)
         newfile = file + '.error'
         print("ERROR:", file)
-        with open(os.path.join(output_path, newfile), 'wb') as f:
+        with open(newfile, 'wb') as f:
             pickle.dump('error', f)
 
 if __name__ == "__main__":
