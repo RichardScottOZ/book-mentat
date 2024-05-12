@@ -16,7 +16,7 @@ for root, dirs, files in os.walk(input_path):
             newfile = file + '.pkl'
             try:
                 elements = get_elements_from_pdf(os.path.join(root,file))
-                with open(os.path.join(output_path,newfile,'.pkl'),'wb') as f:
+                with open(os.path.join(output_path,newfile),'wb') as f:
                     pickle.dump(elements, f)
             except Exception as parseE:
                 print(parseE)
