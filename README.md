@@ -194,6 +194,7 @@ sudo lsof -i :11434
 - tesseract https://tesseract-ocr.github.io/tessdoc/Installation.html
 
 ## Parsee pdf
+- https://github.com/parsee-ai/parsee-pdf-reader
 - pdf reader conflicts
 - Installing collected packages: pytesseract, pypdf, pycparser, pdf2image, opencv-python, cffi, cryptography, pdfminer-six, parsee-pdf-reader
   Attempting uninstall: pypdf
