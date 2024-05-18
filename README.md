@@ -152,8 +152,15 @@ WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode.
 
 Here is some troubleshooting steps that will hopefully help:
 
-Stop the background service: sudo systemctl stop ollama
-Run lsof as sudo to rule out permissions issues: sudo lsof -i :11434
+Stop the background service: 
+```bash
+sudo systemctl stop ollama
+```
+
+Run lsof as sudo to rule out permissions issues: 
+```bash
+sudo lsof -i :11434
+```
 
 # Embeddings
 - multi GPU approach
