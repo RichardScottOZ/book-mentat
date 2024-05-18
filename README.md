@@ -205,3 +205,6 @@ llama-index-readers-file 0.1.20 requires pypdf<5.0.0,>=4.0.1, but you have pypdf
 Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 parsee-pdf-reader-0.1.5.8 pdf2image-1.17.0 pdfminer-six-20221105 pycparser-2.22 pypdf-3.17.4 pytesseract-0.3.10
 
 
+# Metadata
+- could use isfdb database dumps
+- or rpggeek similarly
