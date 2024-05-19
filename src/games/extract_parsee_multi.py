@@ -9,7 +9,9 @@ def process_pdf(file):
     output_path = "/mnt/usb_mount/games/parseenumber"
     
     filelist = file.split('(')
+    print("FILELIST:",filelist)
     filenumber = filelist[-1]
+    print("FILENUMBER:",filenumber)
     filenumber = filenumber.replace(')','')
 
     print("FILE PROCESSING:",file, filenumber)
