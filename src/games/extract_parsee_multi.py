@@ -31,7 +31,7 @@ if __name__ == "__main__":
     pool = Pool()  # Create a pool of worker processes
     for root, dirs, files in os.walk(input_path):
         for file in files:
-            if file.endswith('.pdf'):
+            if file.endswith('.pdf') and not file.endswith('.log'):
                 pool.apply_async(process_pdf, args=(os.path.join(root,file),))
 
     pool.close()  # Close the pool, indicating that no more tasks will be added

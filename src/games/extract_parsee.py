@@ -17,7 +17,7 @@ with open(os.path.join(input_path,logfile),'w') as mainlogf:
     for root, dirs, files in os.walk(input_path):
 
             for file in files:
-                if '.pdf' in file:
+                if '.pdf' in file and '.log' not in file:
                     print(file)
                     newfile = file + '.pkl'
 
