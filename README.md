@@ -209,3 +209,7 @@ Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 pa
 # Metadata
 - could use isfdb database dumps
 - or rpggeek similarly
+
+# Logging
+- needs logging added to track things in main program
+
