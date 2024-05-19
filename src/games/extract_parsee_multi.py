@@ -9,16 +9,15 @@ def process_pdf(file):
     output_path = "/mnt/usb_mount/games/parseenumber"
     
     filelist = file.split('(')
-    print("FILELIST:",filelist)
+    #print("FILELIST:",filelist)
     filenumber = filelist[-1]
-    print("FILENUMBER:",filenumber)
-    filenumber = filenumber.replace(')','')
+    result = filenumber.index(')')
+    filenumber = filenumber[0:result]
+    #print("FILENUMBER:",filenumber)
 
     print("FILE PROCESSING:",file, filenumber)
 
     newfile = file + '_' + filenumber + '.pkl'
-
-
 
     try:
         elements = get_elements_from_pdf(file)
