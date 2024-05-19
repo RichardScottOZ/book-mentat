@@ -12,7 +12,7 @@ def process_pdf(file):
     filenumber = filelist[-1]
     filenumber = filenumber.replace(')','')
 
-    print("FILE PROCESSING:",file. filenumber)
+    print("FILE PROCESSING:",file, filenumber)
 
     newfile = file + '_' + filenumber + '.pkl'
 
