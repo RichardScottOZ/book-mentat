@@ -33,7 +33,7 @@ def process_pdf(file):
 
 if __name__ == "__main__":
     input_path = "/mnt/usb_mount/books/Calibre Library"
-    output_path = "/mnt/usb_mount/games/parsee"
+    output_path = "/mnt/usb_mount/games/parseenumber"
     os.makedirs(output_path, exist_ok=True)
     counterror = 0
 
