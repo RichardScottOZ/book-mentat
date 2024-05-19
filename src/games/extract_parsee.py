@@ -11,6 +11,7 @@ counterror = 0
 
 logfile = 'main_log.log'
 
+count = -1
 with open(os.path.join(input_path,logfile),'w') as mainlogf:
 
     for root, dirs, files in os.walk(input_path):
@@ -21,16 +22,17 @@ with open(os.path.join(input_path,logfile),'w') as mainlogf:
                     newfile = file + '.pkl'
 
                     try:
+                        count += 1
                         elements = get_elements_from_pdf(os.path.join(root,file))
                         with open(os.path.join(output_path,newfile),'wb') as f:
                             pickle.dump(elements, f)
-                        mainlogf.writelines(str(file) + " : COMPLETED" )
+                        mainlogf.writelines(str(count) + " : " + str(file) + " : COMPLETED" + "\n")
                     except Exception as parseE:
                         print(parseE)
                         newfile = file + '.error'
                         print("ERROR:",file)
                         counterror += 1
-                        mainlogf.writelines(str(file) + " : ERROR" )
+                        mainlogf.writelines(str(count) + " : " + str(file) + " : ERROR" + str(parseE) + "\n" )
 
                         with open(os.path.join(output_path,newfile),'wb') as f:
                             pickle.dump('error', f)
