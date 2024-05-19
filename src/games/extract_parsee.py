@@ -11,7 +11,7 @@ counterror = 0
 
 logfile = 'main_log.log'
 
-with open(os.path.join(root,logfile),'w') as mainlogf:
+with open(os.path.join(input_path,logfile),'w') as mainlogf:
 
     for root, dirs, files in os.walk(input_path):
 
