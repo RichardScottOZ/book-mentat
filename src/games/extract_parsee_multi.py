@@ -5,9 +5,17 @@ from multiprocessing import Pool
 
 def process_pdf(file):
     from pdf_reader import get_elements_from_pdf
-    output_path = "/mnt/usb_mount/games/parsee"
+    #output_path = "/mnt/usb_mount/games/parsee"
+    output_path = "/mnt/usb_mount/games/parseenumber"
     print("FILE PROCESSING:",file)
-    newfile = file + '.pkl'
+    
+    filelist = file.split('(')
+    filenumber = filelist[-1]
+    filenumber = filenumber.replace(')','')
+
+    newfile = file + '_' + filenumber = '.pkl'
+
+
 
     try:
         elements = get_elements_from_pdf(file)
