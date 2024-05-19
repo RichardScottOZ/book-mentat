@@ -7,11 +7,12 @@ def process_pdf(file):
     from pdf_reader import get_elements_from_pdf
     #output_path = "/mnt/usb_mount/games/parsee"
     output_path = "/mnt/usb_mount/games/parseenumber"
-    print("FILE PROCESSING:",file)
     
     filelist = file.split('(')
     filenumber = filelist[-1]
     filenumber = filenumber.replace(')','')
+
+    print("FILE PROCESSING:",file. filenumber)
 
     newfile = file + '_' + filenumber + '.pkl'
 
