@@ -7,14 +7,16 @@ counterror = 0
 
 count = -1
 
-for root, dirs, files in os.walk(input_path):
-    for file in files:
-        if '.pdf' not in file or '.log' in file:
-            continue
-        if os.path.exists(os.path.join(output_path,file + '.pkl')):
-            print("COMPLETE:", file)
-        else:
-            print("NEED TO CHECK:", file)
-            break
+with open(os.path.join(input_path,'complete.log'),'w') as f:
+    for root, dirs, files in os.walk(input_path):
+        for file in files:
+            if '.pdf' not in file or '.log' in file:
+                continue
+            if os.path.exists(os.path.join(output_path,file + '.pkl')):
+                print("COMPLETE:", file)
+                f.writelines("COMPLETE: " + file)
+            else:
+                print("NEED TO CHECK:", file)
+                f.writelines("NEED TO CHECK: " + file)
 
 
