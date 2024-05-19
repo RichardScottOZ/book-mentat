@@ -1,0 +1,14 @@
+import os
+import pandas as pd
+input_path = "/mnt/usb_mount/books/Calibre Library"
+output_path = "/mnt/usb_mount/games/parsee"
+
+counterror = 0
+
+logfile = 'main_log.log'
+
+count = -1
+
+for root, dirs, files in os.walk(input_path):
+
+
