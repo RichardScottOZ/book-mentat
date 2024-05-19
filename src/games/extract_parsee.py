@@ -9,36 +9,37 @@ output_path = "/mnt/usb_mount/games/parsee"
 os.makedirs(output_path, exist_ok=True)
 counterror = 0
 
-for root, dirs, files in os.walk(input_path):
-    logfile = 'main_log.log'
-    
-    with open(os.path.join(root,logfile),'w') as mainlogf:
+logfile = 'main_log.log'
 
-        for file in files:
-            if '.pdf' in file:
-                print(file)
-                newfile = file + '.pkl'
+with open(os.path.join(root,logfile),'w') as mainlogf:
 
-                try:
-                    elements = get_elements_from_pdf(os.path.join(root,file))
-                    with open(os.path.join(output_path,newfile),'wb') as f:
-                        pickle.dump(elements, f)
-                    mainlogf.writelines(str(file) + " : COMPLETED" )
-                except Exception as parseE:
-                    print(parseE)
-                    newfile = file + '.error'
-                    print("ERROR:",file)
-                    counterror += 1
-                    mainlogf.writelines(str(file) + " : ERROR" )
+    for root, dirs, files in os.walk(input_path):
 
-                    with open(os.path.join(output_path,newfile),'wb') as f:
-                        pickle.dump('error', f)
+            for file in files:
+                if '.pdf' in file:
+                    print(file)
+                    newfile = file + '.pkl'
 
-                        
-                #print(elements)
-                #break
+                    try:
+                        elements = get_elements_from_pdf(os.path.join(root,file))
+                        with open(os.path.join(output_path,newfile),'wb') as f:
+                            pickle.dump(elements, f)
+                        mainlogf.writelines(str(file) + " : COMPLETED" )
+                    except Exception as parseE:
+                        print(parseE)
+                        newfile = file + '.error'
+                        print("ERROR:",file)
+                        counterror += 1
+                        mainlogf.writelines(str(file) + " : ERROR" )
 
-    #break
+                        with open(os.path.join(output_path,newfile),'wb') as f:
+                            pickle.dump('error', f)
+
+                            
+                    #print(elements)
+                    #break
+
+        #break
 print("FINISHED: and there were ",counterror, " failures")    
 #If you are processing a PDF that needs OCR but no elements or just very few are being returned, you can force OCR like this (replace the paths):
 
