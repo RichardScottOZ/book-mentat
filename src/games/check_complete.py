@@ -14,9 +14,9 @@ with open(os.path.join(input_path,'complete.log'),'w') as f:
                 continue
             if os.path.exists(os.path.join(output_path,file + '.pkl')):
                 print("COMPLETE:", file)
-                f.writelines("COMPLETE: " + file)
+                f.writelines("COMPLETE: " + file + "\n")
             else:
                 print("NEED TO CHECK:", file)
-                f.writelines("NEED TO CHECK: " + file)
+                f.writelines("NEED TO CHECK: " + file + "\n")
 
 
