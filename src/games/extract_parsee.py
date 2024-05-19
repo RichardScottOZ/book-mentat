@@ -23,13 +23,13 @@ for root, dirs, files in os.walk(input_path):
                     elements = get_elements_from_pdf(os.path.join(root,file))
                     with open(os.path.join(output_path,newfile),'wb') as f:
                         pickle.dump(elements, f)
-                    mainlogf.writelines(str(file), " : COMPLETED" )
+                    mainlogf.writelines(str(file) + " : COMPLETED" )
                 except Exception as parseE:
                     print(parseE)
                     newfile = file + '.error'
                     print("ERROR:",file)
                     counterror += 1
-                    mainlogf.writelines(str(file), " : ERROR" )
+                    mainlogf.writelines(str(file) + " : ERROR" )
 
                     with open(os.path.join(output_path,newfile),'wb') as f:
                         pickle.dump('error', f)
