@@ -13,10 +13,10 @@ with open(os.path.join(input_path,'complete.log'),'w') as f:
             if '.pdf' not in file or '.log' in file:
                 continue
             if os.path.exists(os.path.join(output_path,file + '.pkl')):
-                print("COMPLETE:", file)
-                f.writelines("COMPLETE: " + file + "\n")
+                print("COMPLETE:", os.path.join(root,file))
+                f.writelines("COMPLETE: " + os.path.join(root,file) + "\n")
             else:
-                print("NEED TO CHECK:", file)
-                f.writelines("NEED TO CHECK: " + file + "\n")
+                print("NEED TO CHECK:", os.path.join(root,file))
+                f.writelines("NEED TO CHECK: " + os.path.join(root,file) + "\n")
 
 
