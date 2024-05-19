@@ -14,19 +14,25 @@ for root, dirs, files in os.walk(input_path):
         if '.pdf' in file:
             print(file)
             newfile = file + '.pkl'
-            try:
-                elements = get_elements_from_pdf(os.path.join(root,file))
-                with open(os.path.join(output_path,newfile),'wb') as f:
-                    pickle.dump(elements, f)
-            except Exception as parseE:
-                print(parseE)
-                newfile = file + '.error'
-                print("ERROR:",file)
-                counterror += 1
-                with open(os.path.join(output_path,newfile),'wb') as f:
-                    pickle.dump('error', f)
+            logfile = file + '_main_log.log'
+            with open(logfile,'w') as mainlogf:
 
-                
+                try:
+                    elements = get_elements_from_pdf(os.path.join(root,file))
+                    with open(os.path.join(output_path,newfile),'wb') as f:
+                        pickle.dump(elements, f)
+                    mainlogf.writelines("COMPLETED: ", str(file))
+                except Exception as parseE:
+                    print(parseE)
+                    newfile = file + '.error'
+                    print("ERROR:",file)
+                    counterror += 1
+                    mainlogf.writelines("ERROR: ", str(file))
+
+                    with open(os.path.join(output_path,newfile),'wb') as f:
+                        pickle.dump('error', f)
+
+                    
             #print(elements)
             #break
 
