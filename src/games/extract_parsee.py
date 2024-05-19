@@ -10,31 +10,33 @@ os.makedirs(output_path, exist_ok=True)
 counterror = 0
 
 for root, dirs, files in os.walk(input_path):
-    for file in files:
-        if '.pdf' in file:
-            print(file)
-            newfile = file + '.pkl'
-            logfile = file + '_main_log.log'
-            with open(logfile,'w') as mainlogf:
+    logfile = 'main_log.log'
+    
+    with open(os.path.join(root,logfile),'w') as mainlogf:
+
+        for file in files:
+            if '.pdf' in file:
+                print(file)
+                newfile = file + '.pkl'
 
                 try:
                     elements = get_elements_from_pdf(os.path.join(root,file))
                     with open(os.path.join(output_path,newfile),'wb') as f:
                         pickle.dump(elements, f)
-                    mainlogf.writelines("COMPLETED: ", str(file))
+                    mainlogf.writelines(str(file), " : COMPLETED" )
                 except Exception as parseE:
                     print(parseE)
                     newfile = file + '.error'
                     print("ERROR:",file)
                     counterror += 1
-                    mainlogf.writelines("ERROR: ", str(file))
+                    mainlogf.writelines(str(file), " : ERROR" )
 
                     with open(os.path.join(output_path,newfile),'wb') as f:
                         pickle.dump('error', f)
 
-                    
-            #print(elements)
-            #break
+                        
+                #print(elements)
+                #break
 
     #break
 print("FINISHED: and there were ",counterror, " failures")    
