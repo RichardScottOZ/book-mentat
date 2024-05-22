@@ -21,7 +21,7 @@ def process_pdf(file):
 
     if os.path.exists( os.path.join(output_path,os.path.basename(newfile)) ):
         print("SKIPPING:",file, filenumber)
-        continue
+        return 
 
     try:
         elements = get_elements_from_pdf(file)
