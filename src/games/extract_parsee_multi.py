@@ -19,6 +19,10 @@ def process_pdf(file):
 
     newfile = file + '_' + filenumber + '.pkl'
 
+    if os.path.exists(os.path.join(output_path,os.path.basename(newfile)):
+        print("SKIPPING:",file, filenumber)
+        continue
+
     try:
         elements = get_elements_from_pdf(file)
         #print(elements)
