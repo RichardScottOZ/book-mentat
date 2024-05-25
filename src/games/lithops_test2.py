@@ -47,8 +47,8 @@ def process_pdf(file):
         dir_path = os.path.dirname(file_path)
         dir_path = '/tmp/' + dir_path
         os.makedirs(dir_path, exist_ok=True)    
-
-        with open(os.path.join(output_path,os.path.basename('/tmp/' + newfile)), 'wb') as f:
+        print("TMP PKL:",'/tmp/' + newfile)
+        with open('/tmp/' + newfile, 'wb') as f:
             pickle.dump(elements, f)
         spdf.upload_file('/tmp/' + newfile, 'lithops-data-books', key=newfile)
     except Exception as parseE:
