@@ -264,6 +264,13 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
     - libgl1 library
     - suggestions https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo
 - so good questions?
+- other solutions
+- pip install opencv-contrib-python
+- install opencv-contrib-python rather than opencv-python.
+- https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo
+- At one point, I used opencv-python-headless which worked for my case with FastAPI when I deployed on Heroku once. What's the 
+- pip install -U opencv-python
+- apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libg
 
 ### Docker
 - docker system prune --all --force  
