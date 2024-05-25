@@ -40,7 +40,7 @@ def process_pdf(file):
     os.makedirs(dir_path, exist_ok=True)
 
     # Write to the file
-    with open(file_path, 'w') as localfile:
+    with open(file_path, 'wb') as localfile:
         localfile.write(pdffile)
 
     print(f'File has been written to {file_path}')        
