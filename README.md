@@ -223,6 +223,6 @@ Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 pa
 # Lithops
 ## Configure
 - Config File
-- Compute Backend [policy, role]
-- Storage Backend
+- Compute Backend [policy, role] https://github.com/lithops-cloud/lithops/blob/master/docs/source/compute_config/aws_lambda.md
+- Storage Backend [bucket] - https://github.com/lithops-cloud/lithops/blob/master/docs/source/storage_config/aws_s3.md
 
