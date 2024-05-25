@@ -61,6 +61,7 @@ RUN unzip lithops_lambda.zip \
     && mv entry_point.py handler/
 
 # Put your dependencies here, using RUN pip install... or RUN apt install...
+ENV LD_LIBRARY_PATH="/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
 
 ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
 CMD [ "handler.entry_point.lambda_handler" ]
