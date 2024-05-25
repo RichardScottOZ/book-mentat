@@ -1,0 +1,6 @@
+lithops:
+    backend: aws_lambda
+
+aws_lambda:
+    execution_role: <EXECUTION_ROLE_ARN>
+    region: us-west-2
