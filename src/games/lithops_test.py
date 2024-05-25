@@ -45,7 +45,14 @@ if __name__ == "__main__":
     #os.makedirs(output_path, exist_ok=True)
     #counterror = 0
 
+    
 
-    with FunctionExecutor() as fexec:
+
+    with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
+
+        #lith = lithops.FunctionExecutor(runtime='lithops-ndvi-v312:01')
+        #lith.call_async(test, data=())
+        #res = lith.get_result()
+        #print(res)  # Prints 'hello'        
         f = fexec.call_async(process_pdf, filetest)
         print(f.result())
