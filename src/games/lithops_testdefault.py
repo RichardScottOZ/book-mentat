@@ -9,7 +9,7 @@ def process_pdf(file):
     import pandas as pd
     df = pd.DataFrame()
     df['boring'] = [1]
-    print(df)
+    return print(df)
 
 if __name__ == "__main__":
     input_path = "/mnt/usb_mount/books/Calibre Library"
