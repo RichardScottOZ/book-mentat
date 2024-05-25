@@ -272,5 +272,9 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 - pip install -U opencv-python
 - apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libg
 
+# possibly
+-  Set the LD_LIBRARY_PATH environment variable
+ ENV LD_LIBRARY_PATH="/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+
 ### Docker
 - docker system prune --all --force  
