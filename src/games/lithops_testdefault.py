@@ -9,12 +9,13 @@ def process_pdf(file):
     import pandas as pd
     df = pd.DataFrame()
     df['boring'] = [1]
+    print(file)
     return print(df)
 
 input_path = "/mnt/usb_mount/books/Calibre Library"
 output_path = "/mnt/usb_mount/games/parseenumber"
 filetest = 'Anodyne Printware/Mothership - HULL BREACH VOL. 1 (25633)/Mothership - HULL BREACH VOL. 1 - Anodyne Printware.pdf'
-#os.makedirs(output_path, exist_ok=True)
+os.makedirs(output_path, exist_ok=True)
 #counterror = 0
 
 
