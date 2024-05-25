@@ -31,22 +31,26 @@ def process_pdf(file):
         print("SKIPPING:",file, filenumber)
         return 
 
-    with cloudopen(file,'rb') as f:
-        pdffile = f.read()
+    spdf = Storage()
 
-    # Define the file path
-    file_path = file
+    spdf.download_file('lithops-data-books',file,'/tmp/' + file)
+    if 1 == 2:
+        with cloudopen(file,'rb') as f:
+            pdffile = f.read()
 
-    # Extract the directory path from the file path
-    dir_path = os.path.dirname(file_path)
-    dir_path = '/tmp/' + dir_path
+        # Define the file path
+        file_path = file
 
-    # Create the directories if they don't exist
-    os.makedirs(dir_path, exist_ok=True)
+        # Extract the directory path from the file path
+        dir_path = os.path.dirname(file_path)
+        dir_path = '/tmp/' + dir_path
 
-    # Write to the file
-    with open('/tmp/' + file_path, 'wb') as localfile:
-        localfile.write(pdffile)
+        # Create the directories if they don't exist
+        os.makedirs(dir_path, exist_ok=True)
+
+        # Write to the file
+        with open('/tmp/' + file_path, 'wb') as localfile:
+            localfile.write(pdffile)
 
     print(f'File has been written to {file_path}')        
     try:
