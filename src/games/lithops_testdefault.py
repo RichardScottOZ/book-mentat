@@ -20,7 +20,8 @@ filetest = 'Anodyne Printware/Mothership - HULL BREACH VOL. 1 (25633)/Mothership
 
 
 
-with FunctionExecutor(runtime='default-runtime') as fexec:
+#with FunctionExecutor(runtime='default-runtime') as fexec:
+with FunctionExecutor(runtime='book-mentat-runtime') as fexec:    
 
     #lith = lithops.FunctionExecutor(runtime='lithops-ndvi-v312:01')
     #lith.call_async(test, data=())
