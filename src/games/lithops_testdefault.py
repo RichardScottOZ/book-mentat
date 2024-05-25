@@ -8,7 +8,7 @@ from multiprocessing import Pool
 def process_pdf(file):
     import pandas as pd
     df = pd.DataFrame()
-    df['boring'] = [1]]
+    df['boring'] = [1]
     print(df)
 
 if __name__ == "__main__":
