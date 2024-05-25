@@ -264,3 +264,6 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
     - libgl1 library
     - suggestions https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo
 - so good questions?
+
+### Docker
+- docker system prune --all --force  
