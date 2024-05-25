@@ -9,7 +9,7 @@ import pickle
 from multiprocessing import Pool
 
 def process_pdf(filepath):
-    for root, dirs, files in os.walk(filepath):
+    for root, dirs, files in cloudos.walk(filepath):
         print(filepath)
         for file in files:
             print(file)
