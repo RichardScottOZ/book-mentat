@@ -42,6 +42,12 @@ def process_pdf(file):
         elements = get_elements_from_pdf('/tmp/' + file)
         #print(elements)
         print("NEWFILE OUTPUT:",output_path,os.path.basename(newfile))
+
+        file_path = newfile
+        dir_path = os.path.dirname(file_path)
+        dir_path = '/tmp/' + dir_path
+        os.makedirs(dir_path, exist_ok=True)    
+
         with open(os.path.join(output_path,os.path.basename('/tmp/' + newfile)), 'wb') as f:
             pickle.dump(elements, f)
         spdf.upload_file('/tmp/' + newfile, 'lithops-data-books', key=newfile)
