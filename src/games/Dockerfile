@@ -10,6 +10,8 @@ RUN apt-get update \
       cmake \
       unzip \
       libgl1 \
+      libgl1-mesa-glx \
+      libglib2.0-0 \
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
     && apt-cache search linux-headers-generic
