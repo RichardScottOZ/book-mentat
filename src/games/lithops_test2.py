@@ -1,5 +1,7 @@
+
+#import os as localos
 from lithops import FunctionExecutor
-from lithops.storage.cloud_proxy import os, open
+from lithops.storage.cloud_proxy import os as cloudos, open as cloudopen
 from lithops import Storage
 
 from pdf_reader import get_elements_from_pdf
@@ -23,11 +25,11 @@ def process_pdf(file):
 
     newfile = file + '_' + filenumber + '.pkl'
 
-    if os.path.exists( os.path.join(output_path,os.path.basename(newfile)) ):
+    if cloudos.path.exists( cloudos.path.join(output_path,cloudos.path.basename(newfile)) ):
         print("SKIPPING:",file, filenumber)
         return 
 
-    with open(file,'rb') as f:
+    with cloudopen(file,'rb') as f:
         pdffile = f.read()
 
     # Define the file path
