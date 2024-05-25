@@ -256,3 +256,5 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 
 ### Build
 - lithops runtime build -f MyDockerfile -b aws_lambda my-container-runtime-name
+- permissions issues:
+    - https://stackoverflow.com/questions/51342810/how-to-fix-dial-unix-var-run-docker-sock-connect-permission-denied-when-gro
