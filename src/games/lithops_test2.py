@@ -10,6 +10,8 @@ from multiprocessing import Pool
 
 def process_pdf(file):
     #import cv2
+    cwd = os.getcwd()
+    print("CURRENTLY:",cwd)
     from pdf_reader import get_elements_from_pdf
     #output_path = "/mnt/usb_mount/games/parsee"
     output_path = "games/parseenumber"
