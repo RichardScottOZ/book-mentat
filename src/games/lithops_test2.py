@@ -39,7 +39,7 @@ def process_pdf(file):
 
     # Extract the directory path from the file path
     dir_path = os.path.dirname(file_path)
-    #dir_path = dir_path
+    dir_path = '/function/' + dir_path
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
