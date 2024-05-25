@@ -50,7 +50,7 @@ def process_pdf(file):
 
     print(f'File has been written to {file_path}')        
     try:
-        elements = get_elements_from_pdf(file)
+        elements = get_elements_from_pdf('/tmp/' + file)
         #print(elements)
         print("NEWFILE OUTPUT:",output_path,os.path.basename(newfile))
         with open(cloudos.path.join(output_path,clouodos.path.basename(newfile)), 'wb') as f:
