@@ -1,6 +1,7 @@
 from lithops import FunctionExecutor
+from lithops.storage.cloud_proxy import os, open
+from lithops import Storage
 
-import os
 from pdf_reader import get_elements_from_pdf
 import pickle
 from multiprocessing import Pool
