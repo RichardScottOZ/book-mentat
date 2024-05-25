@@ -17,6 +17,8 @@ RUN apt-get update \
       ffmpeg \
       libsm6 \ 
       libxext6 \
+      libxrender1 \
+      libfontconfig1 \         
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
     && apt-cache search linux-headers-generic
@@ -34,6 +36,7 @@ RUN pip install --upgrade --ignore-installed pip wheel six setuptools \
         redis \
         httplib2 \
         requests \
+        opencv-contrib-python \
         parsee-pdf-reader \
         numpy \
         scipy \
