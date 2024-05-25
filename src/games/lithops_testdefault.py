@@ -11,6 +11,14 @@ def process_pdf(file):
     df['boring'] = [1]
     return print(df)
 
+input_path = "/mnt/usb_mount/books/Calibre Library"
+output_path = "/mnt/usb_mount/games/parseenumber"
+filetest = 'Anodyne Printware/Mothership - HULL BREACH VOL. 1 (25633)/Mothership - HULL BREACH VOL. 1 - Anodyne Printware.pdf'
+#os.makedirs(output_path, exist_ok=True)
+#counterror = 0
+
+
+
 
 with FunctionExecutor(runtime='default-runtime') as fexec:
 
