@@ -25,6 +25,8 @@ RUN apt-get update \
 
 ARG FUNCTION_DIR="/function"
 
+RUN chmod +rwx /function
+
 # Copy function code
 RUN mkdir -p ${FUNCTION_DIR}
 
