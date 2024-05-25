@@ -58,17 +58,8 @@ if __name__ == "__main__":
     filetest = 'Anodyne Printware/Mothership - HULL BREACH VOL. 1 (25633)/Mothership - HULL BREACH VOL. 1 - Anodyne Printware.pdf'
     filetest = 'books/Calibre Library/Sean McCoy/Mothership - WOM-v1.1 (26106)/Mothership - WOM-v1.1 - Sean McCoy.pdf'
     filetest = 'books/Calibre Library/Sean McCoy/Mothership - PSG-v1.1 (26118)/Mothership - PSG-v1.1 - Sean McCoy.pdf'
-    #os.makedirs(output_path, exist_ok=True)
-    #counterror = 0
-
-    
-
 
     with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
 
-        #lith = lithops.FunctionExecutor(runtime='lithops-ndvi-v312:01')
-        #lith.call_async(test, data=())
-        #res = lith.get_result()
-        #print(res)  # Prints 'hello'        
         f = fexec.call_async(process_pdf, filetest)
         print(f.result())
