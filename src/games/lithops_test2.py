@@ -27,6 +27,23 @@ def process_pdf(file):
         print("SKIPPING:",file, filenumber)
         return 
 
+    with open(file,'rb') as f:
+        pdffile = f.read()
+
+    # Define the file path
+    file_path = file
+
+    # Extract the directory path from the file path
+    dir_path = os.path.dirname(file_path)
+
+    # Create the directories if they don't exist
+    os.makedirs(dir_path, exist_ok=True)
+
+    # Write to the file
+    with open(file_path, 'w') as localfile:
+        localfile.write(pdffile)
+
+    print(f'File has been written to {file_path}')        
     try:
         elements = get_elements_from_pdf(file)
         #print(elements)
