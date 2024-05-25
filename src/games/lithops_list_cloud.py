@@ -10,7 +10,7 @@ from multiprocessing import Pool
 
 def process_pdf(filepath):
     spdf = Storage()
-    flist = Storage.list_objects()
+    flist = Storage.list_objects('lithops-data-books',filepath)
     for f in flist:
         print(f)
 if __name__ == "__main__":
