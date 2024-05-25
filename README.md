@@ -213,3 +213,8 @@ Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 pa
 # Logging
 - needs logging added to track things in main program
 
+# Speed
+- Game collection with lots of images - some things being old scans will be slow
+- Consider parallelising
+    - All at once embarassingly parallel job
+    - Perhaps Lithops to abstract some configuration [supposedly]?
