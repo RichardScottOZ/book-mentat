@@ -37,13 +37,13 @@ def process_pdf(file):
 
     # Extract the directory path from the file path
     dir_path = os.path.dirname(file_path)
-    dir_path = 'tmp/' + dir_path
+    #dir_path = dir_path
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
 
     # Write to the file
-    with open('tmp/' + file_path, 'wb') as localfile:
+    with open(file_path, 'wb') as localfile:
         localfile.write(pdffile)
 
     print(f'File has been written to {file_path}')        
