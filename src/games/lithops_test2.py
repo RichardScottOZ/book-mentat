@@ -37,12 +37,13 @@ def process_pdf(file):
 
     # Extract the directory path from the file path
     dir_path = os.path.dirname(file_path)
+    dir_path = 'tmp/' + dir_path
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
 
     # Write to the file
-    with open(file_path, 'wb') as localfile:
+    with open('tmp/' + file_path, 'wb') as localfile:
         localfile.write(pdffile)
 
     print(f'File has been written to {file_path}')        
@@ -50,13 +51,13 @@ def process_pdf(file):
         elements = get_elements_from_pdf(file)
         #print(elements)
         print("NEWFILE OUTPUT:",output_path,os.path.basename(newfile))
-        with open(os.path.join(output_path,os.path.basename(newfile)), 'wb') as f:
+        with open(cloudos.path.join(output_path,clouodos.path.basename(newfile)), 'wb') as f:
             pickle.dump(elements, f)
     except Exception as parseE:
         print(parseE)
         newfile = file + '_' + filenumber + '.error'
         print("ERROR:", file)
-        with open(os.path.join(output_path,os.path.basename(newfile)), 'wb') as f:
+        with open(cloudos.path.join(output_path,cloudos.path.basename(newfile)), 'wb') as f:
             pickle.dump(str(parseE), f)
 
 if __name__ == "__main__":
