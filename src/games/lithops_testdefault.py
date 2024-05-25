@@ -1,7 +1,7 @@
 from lithops import FunctionExecutor
 from lithops.storage.cloud_proxy import os, open
 
-storage = Storage()
+
 
 import os
 from pdf_reader import get_elements_from_pdf
@@ -13,7 +13,7 @@ def process_pdf(file):
     df = pd.DataFrame()
     df['boring'] = [1]
     print(file)
-
+    storage = Storage()
     slist = storage.list_objects('lithops-data-books', prefix='books/')
     print(slist)
 
