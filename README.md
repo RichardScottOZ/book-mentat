@@ -242,3 +242,8 @@ Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 pa
 2024-05-25 12:38:53,191 [INFO] wait.py:101 -- ExecutorID 8xc5f5-0 - Waiting for 1 function activations to complete
 ```
 
+## Runtimes
+- Need to build a Docker image for anything bespoke of interest
+- Follow examples
+    - https://github.com/lithops-cloud/lithops/tree/master/runtime/aws_lambda
+
