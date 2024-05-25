@@ -247,3 +247,9 @@ Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 pa
 - Follow examples
     - https://github.com/lithops-cloud/lithops/tree/master/runtime/aws_lambda
 
+- Needs Docker Desktop https://docs.docker.com/desktop/install/ubuntu/
+```bash
+At the end of the installation process, apt displays an error due to installing a downloaded package. You can ignore this error message.
+
+N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
+```
