@@ -14,6 +14,9 @@ RUN apt-get update \
       libgl1-mesa-glx \
       libglib2.0-0 \
       libglu1-mesa-dev \ 
+      ffmpeg \
+      libsm6 \ 
+      libxext6 \
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
     && apt-cache search linux-headers-generic
