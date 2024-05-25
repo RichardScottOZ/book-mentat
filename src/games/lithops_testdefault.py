@@ -12,7 +12,7 @@ def process_pdf(file):
     df['boring'] = [1]
     print(file)
 
-    with open('/books/Calibre Library/Sean McCoy/Mothership - WOM-v1.1 (26106)/Mothership - WOM-v1.1 - Sean McCoy.pdf', 'rb') as f:
+    with open('books/Calibre Library/Sean McCoy/Mothership - WOM-v1.1 (26106)/Mothership - WOM-v1.1 - Sean McCoy.pdf', 'rb') as f:
         content = f.read()
 
         print(len(content))
