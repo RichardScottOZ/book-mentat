@@ -226,3 +226,19 @@ Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 pa
 - Compute Backend [policy, role] https://github.com/lithops-cloud/lithops/blob/master/docs/source/compute_config/aws_lambda.md
 - Storage Backend [bucket] - https://github.com/lithops-cloud/lithops/blob/master/docs/source/storage_config/aws_s3.md
 
+## Cloud test
+```bash
+/book-mentat/src/games$ lithops hello
+2024-05-25 12:37:06,919 [INFO] config.py:139 -- Lithops v3.3.0 - Python3.10
+2024-05-25 12:37:07,708 [INFO] aws_s3.py:59 -- S3 client created - Region: us-west-2
+2024-05-25 12:37:09,791 [INFO] aws_lambda.py:97 -- AWS Lambda client created - Region: us-west-2
+2024-05-25 12:37:09,793 [INFO] invokers.py:107 -- ExecutorID 8xc5f5-0 | JobID A000 - Selected Runtime: default-runtime-v310 - 256MB
+2024-05-25 12:37:10,010 [INFO] invokers.py:115 -- Runtime default-runtime-v310 with 256MB is not yet deployed
+2024-05-25 12:37:10,010 [INFO] aws_lambda.py:388 -- Deploying runtime: default-runtime-v310 - Memory: 256 - Timeout: 180
+2024-05-25 12:37:10,838 [INFO] aws_lambda.py:187 -- Creating lambda layer for runtime default-runtime-v310
+2024-05-25 12:38:53,088 [INFO] invokers.py:174 -- ExecutorID 8xc5f5-0 | JobID A000 - Starting function invocation: hello() - Total: 1 activations
+2024-05-25 12:38:53,166 [INFO] invokers.py:213 -- ExecutorID 8xc5f5-0 | JobID A000 - View execution logs at /tmp/lithops-richard/logs/8dc5f5-0-A000.log
+2024-05-25 12:38:53,191 [INFO] executors.py:491 -- ExecutorID 8xc5f5-0 - Getting results from 1 function activations
+2024-05-25 12:38:53,191 [INFO] wait.py:101 -- ExecutorID 8xc5f5-0 - Waiting for 1 function activations to complete
+```
+
