@@ -59,7 +59,7 @@ def process_pdf(file):
         print(parseE)
         newfile = file + '_' + filenumber + '.error'
         print("ERROR:", file)
-        with open(cloudos.path.join(output_path,cloudos.path.basename(newfile)), 'wb') as f:
+        with cloudopen(cloudos.path.join(output_path,cloudos.path.basename(newfile)), 'wb') as f:
             pickle.dump(str(parseE), f)
 
 if __name__ == "__main__":
