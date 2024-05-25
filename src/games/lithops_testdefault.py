@@ -10,7 +10,7 @@ def process_pdf(file):
     df = pd.DataFrame()
     df['boring'] = [1]]
     print(df)
-    
+
 if __name__ == "__main__":
     input_path = "/mnt/usb_mount/books/Calibre Library"
     output_path = "/mnt/usb_mount/games/parseenumber"
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     
 
 
-    with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
+    with FunctionExecutor(runtime='default-runtime') as fexec:
 
         #lith = lithops.FunctionExecutor(runtime='lithops-ndvi-v312:01')
         #lith.call_async(test, data=())
