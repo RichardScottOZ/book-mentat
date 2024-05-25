@@ -33,6 +33,16 @@ def process_pdf(file):
 
     spdf = Storage()
 
+    # Define the file path
+    file_path = file
+
+    # Extract the directory path from the file path
+    dir_path = os.path.dirname(file_path)
+    dir_path = '/tmp/' + dir_path
+
+    # Create the directories if they don't exist
+    os.makedirs(dir_path, exist_ok=True)    
+
     spdf.download_file('lithops-data-books',file,'/tmp/' + file)
     if 1 == 2:
         with cloudopen(file,'rb') as f:
