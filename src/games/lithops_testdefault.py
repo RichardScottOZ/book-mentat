@@ -1,6 +1,8 @@
 from lithops import FunctionExecutor
 from lithops.storage.cloud_proxy import os, open
 
+storage = Storage()
+
 import os
 from pdf_reader import get_elements_from_pdf
 import pickle
@@ -11,6 +13,10 @@ def process_pdf(file):
     df = pd.DataFrame()
     df['boring'] = [1]
     print(file)
+
+    slist = storage.list_objects('lithops-data-books', prefix='books/')
+    print(slist)
+
 
     with open('books/Calibre Library/Sean McCoy/Mothership - WOM-v1.1 (26106)/Mothership - WOM-v1.1 - Sean McCoy.pdf', 'rb') as f:
         content = f.read()
