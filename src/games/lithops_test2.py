@@ -44,31 +44,15 @@ def process_pdf(file):
     os.makedirs(dir_path, exist_ok=True)    
 
     spdf.download_file('lithops-data-books',file,'/tmp/' + file)
-    if 1 == 2:
-        with cloudopen(file,'rb') as f:
-            pdffile = f.read()
-
-        # Define the file path
-        file_path = file
-
-        # Extract the directory path from the file path
-        dir_path = os.path.dirname(file_path)
-        dir_path = '/tmp/' + dir_path
-
-        # Create the directories if they don't exist
-        os.makedirs(dir_path, exist_ok=True)
-
-        # Write to the file
-        with open('/tmp/' + file_path, 'wb') as localfile:
-            localfile.write(pdffile)
 
     print(f'File has been written to {file_path}')        
     try:
         elements = get_elements_from_pdf('/tmp/' + file)
         #print(elements)
         print("NEWFILE OUTPUT:",output_path,os.path.basename(newfile))
-        with open(cloudos.path.join(output_path,cloudos.path.basename(newfile)), 'wb') as f:
+        with open(os.path.join(output_path,os.path.basename('/tmp/' + newfile)), 'wb') as f:
             pickle.dump(elements, f)
+        spdf.upload_file('/tmp/' + newfile, 'lithops-data-books', key=newfile)
     except Exception as parseE:
         print(parseE)
         newfile = file + '_' + filenumber + '.error'
