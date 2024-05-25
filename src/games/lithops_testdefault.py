@@ -1,5 +1,6 @@
 from lithops import FunctionExecutor
 from lithops.storage.cloud_proxy import os, open
+from lithops import Storage
 
 
 
