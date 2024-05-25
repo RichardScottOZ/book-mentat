@@ -13,6 +13,7 @@ RUN apt-get update \
       libgl1 \
       libgl1-mesa-glx \
       libglib2.0-0 \
+      libglu1-mesa-dev \ 
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
     && apt-cache search linux-headers-generic
