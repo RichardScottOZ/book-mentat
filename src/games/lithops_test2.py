@@ -9,19 +9,14 @@ import pickle
 from multiprocessing import Pool
 
 def process_pdf(file):
-    #import cv2
-    cwd = os.getcwd()
-    print("CURRENTLY:",cwd)
     from pdf_reader import get_elements_from_pdf
     #output_path = "/mnt/usb_mount/games/parsee"
     output_path = "games/parseenumber"
     
     filelist = file.split('(')
-    #print("FILELIST:",filelist)
     filenumber = filelist[-1]
     result = filenumber.index(')')
     filenumber = filenumber[0:result]
-    #print("FILENUMBER:",filenumber)
 
     print("FILE PROCESSING:",file, filenumber)
 
@@ -33,14 +28,11 @@ def process_pdf(file):
 
     spdf = Storage()
 
-    # Define the file path
     file_path = file
 
-    # Extract the directory path from the file path
     dir_path = os.path.dirname(file_path)
     dir_path = '/tmp/' + dir_path
 
-    # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)    
 
     spdf.download_file('lithops-data-books',file,'/tmp/' + file)
