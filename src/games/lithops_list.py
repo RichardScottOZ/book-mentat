@@ -15,7 +15,7 @@ def process_pdf(filepath):
             print(file)
 
 if __name__ == "__main__":
-    input_path = "books/Calibre Library"
+    input_path = "books/Calibre Library/"
     output_path = "games/parseenumber"
 
     with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
