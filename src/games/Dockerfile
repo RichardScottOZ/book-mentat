@@ -9,6 +9,7 @@ RUN apt-get update \
       make \
       cmake \
       unzip \
+      python3-opencv \
       libgl1 \
       libgl1-mesa-glx \
       libglib2.0-0 \
