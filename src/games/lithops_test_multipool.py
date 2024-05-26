@@ -63,7 +63,7 @@ if __name__ == "__main__":
     output_path = "games/parseenumber"
 
     with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
-        filetest = 'books/Calibre Library/'
+        filepath = 'books/Calibre Library/'
         print(filetest)
         #f = fexec.call_async(process_pdf, filetest)
         #print(f.result())
