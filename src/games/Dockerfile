@@ -29,9 +29,8 @@ RUN apt-get update \
 
 ARG FUNCTION_DIR="/function"
 
-
 # Copy function code
-RUN mkdir -p ${FUNCTION_DIR} && chmod -R 777 ${FUNCTION_DIR}
+RUN mkdir -p ${FUNCTION_DIR}
 
 # Update pip
 RUN pip install --upgrade --ignore-installed pip wheel six setuptools \
