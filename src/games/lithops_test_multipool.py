@@ -1,4 +1,3 @@
-
 import os
 from lithops import FunctionExecutor
 from lithops.storage.cloud_proxy import os as cloudos, open as cloudopen
@@ -6,7 +5,7 @@ from lithops import Storage
 
 from pdf_reader import get_elements_from_pdf
 import pickle
-from multiprocessing import Pool
+from lithops.multiprocessing import Pool
 
 def process_pdf(file):
     from pdf_reader import get_elements_from_pdf
@@ -74,3 +73,11 @@ if __name__ == "__main__":
             plist.append(f['Key'])
 
         print(plist[0:3])
+
+    with Pool() as pool:
+        async_result = pool.map_async(process_pdf, plist[0:3])
+        try:
+            result = async_result.get(timeout=3600)
+            print(result)
+        except TimeoutError:
+            print("Timed out!")        
