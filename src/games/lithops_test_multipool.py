@@ -14,6 +14,12 @@ def process_pdf(file):
     output_path = "games/parseenumber"
     #need to find files with parens and handle
     # get number via regex etc. instead
+
+    def list_installed_packages():
+        result = subprocess.run(['pip', 'list'], capture_output=True, text=True)
+        print(result.stdout)
+
+    list_installed_packages()
     
     try:
         filelist = file.split('(')
