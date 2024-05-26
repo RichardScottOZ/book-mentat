@@ -18,7 +18,8 @@ RUN apt-get update \
       libsm6 \ 
       libxext6 \
       libxrender1 \
-      libfontconfig1 \         
+      libfontconfig1 \       
+      poppler-utils \
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
     && apt-cache search linux-headers-generic
