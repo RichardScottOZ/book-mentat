@@ -8,6 +8,7 @@ import pickle
 from lithops.multiprocessing import Pool
 
 def process_pdf(file):
+    print("FILE BEINIG PROCESSED:",file)
     from pdf_reader import get_elements_from_pdf
     #output_path = "/mnt/usb_mount/games/parsee"
     output_path = "games/parseenumber"
