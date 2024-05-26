@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     with Pool() as pool:
         #async_result = pool.map_async(process_pdf, plist[0:3])
-        async_result = pool.map_async(process_pdf, plist, throw_except=False)
+        async_result = pool.map_async(process_pdf, plist)
         try:
             result = async_result.get()
             print(result)
