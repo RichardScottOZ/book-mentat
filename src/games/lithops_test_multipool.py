@@ -8,17 +8,21 @@ import pickle
 from lithops.multiprocessing import Pool
 
 def process_pdf(file):
-    print("FILE BEINIG PROCESSED:",file)
+    print("FILE BEING PROCESSED:",file)
     from pdf_reader import get_elements_from_pdf
     #output_path = "/mnt/usb_mount/games/parsee"
     output_path = "games/parseenumber"
     
-    filelist = file.split('(')
-    filenumber = filelist[-1]
-    result = filenumber.index(')')
-    filenumber = filenumber[0:result]
+    try:
+        filelist = file.split('(')
+        filenumber = filelist[-1]
+        result = filenumber.index(')')
+        filenumber = filenumber[0:result]
 
-    print("FILE PROCESSING:",file, filenumber)
+        print("FILE PROCESSING:",file, filenumber)
+    except Exception as badnumberE:
+        print("BADNUMBER:",file)
+        return
 
     newfile = file + '_' + filenumber + '.pkl'
 
