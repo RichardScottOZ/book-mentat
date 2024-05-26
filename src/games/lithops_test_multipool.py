@@ -20,7 +20,7 @@ def process_pdf(file):
         result = subprocess.run(['pip', 'list'], capture_output=True, text=True)
         print(result.stdout)
 
-    list_installed_packages()
+    #list_installed_packages()
 
     try:
         filelist = file.split('(')
