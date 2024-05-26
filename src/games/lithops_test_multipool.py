@@ -12,6 +12,8 @@ def process_pdf(file):
     from pdf_reader import get_elements_from_pdf
     #output_path = "/mnt/usb_mount/games/parsee"
     output_path = "games/parseenumber"
+    #need to find files with parens and handle
+    # get number via regex etc. instead
     
     try:
         filelist = file.split('(')
