@@ -91,7 +91,7 @@ if __name__ == "__main__":
     with Pool() as pool:
         async_result = pool.map_async(process_pdf, plist[0:3])
         try:
-            result = async_result.get(timeout=3600)
+            result = async_result.get()
             print(result)
         except TimeoutError:
             print("Timed out!")        
