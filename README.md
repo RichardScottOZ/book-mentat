@@ -274,6 +274,8 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 - At one point, I used opencv-python-headless which worked for my case with FastAPI when I deployed on Heroku once. What's the 
 - pip install -U opencv-python
 - apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libg
+- runtime memory you can adjust in config for pool
+- /tmp is writeable in container
 
 # possibly
 -  Set the LD_LIBRARY_PATH environment variable
