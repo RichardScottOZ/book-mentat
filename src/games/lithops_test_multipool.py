@@ -1,4 +1,5 @@
 import os
+import subprocess
 from lithops import FunctionExecutor
 from lithops.storage.cloud_proxy import os as cloudos, open as cloudopen
 from lithops import Storage
