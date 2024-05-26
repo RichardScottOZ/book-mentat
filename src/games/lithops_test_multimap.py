@@ -31,7 +31,19 @@ def process_pdf(file):
         print("FILE PROCESSING:",file, filenumber)
     except Exception as badnumberE:
         print("BADNUMBER:",file)
-        return
+        # (23034)
+        import re
+
+        pattern = r'\(\d+\)'
+        # Find all matches in the string
+        matches = re.findall(pattern, file)
+
+        if len(matches) > 0:
+            for match in matches:
+                filenumber = match
+                break
+        else:
+            return
 
     newfile = file + '_' + filenumber + '.pkl'
 
