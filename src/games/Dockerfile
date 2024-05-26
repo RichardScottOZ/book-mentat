@@ -21,7 +21,7 @@ RUN apt-get update \
       libfontconfig1 \       
       poppler-utils \
       tesseract-ocr \
-      libtesseract-dev \
+      libtesseract-dev 
             
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
