@@ -283,3 +283,6 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 
 ### Docker
 - docker system prune --all --force  
+
+### Failures
+- https://github.com/lithops-cloud/lithops/issues/1248
