@@ -192,6 +192,8 @@ sudo lsof -i :11434
 
 ## OCR
 - tesseract https://tesseract-ocr.github.io/tessdoc/Installation.html
+- sudo apt install tesseract-ocr
+- sudo apt install libtesseract-dev
 
 ## Parsee pdf
 - https://github.com/parsee-ai/parsee-pdf-reader

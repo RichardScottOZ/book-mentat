@@ -20,6 +20,9 @@ RUN apt-get update \
       libxrender1 \
       libfontconfig1 \       
       poppler-utils \
+      tesseract-ocr \
+      libtesseract-dev \
+            
     # cleanup package lists, they are not used anymore in this image
     && rm -rf /var/lib/apt/lists/* \
     && apt-cache search linux-headers-generic
