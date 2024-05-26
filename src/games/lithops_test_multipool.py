@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
         filepath = 'books/Calibre Library/'
-        print(filetest)
+        print(filepath)
         #f = fexec.call_async(process_pdf, filetest)
         #print(f.result())
         spdfl = Storage()
