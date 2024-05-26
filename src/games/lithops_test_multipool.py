@@ -20,7 +20,7 @@ def process_pdf(file):
         print(result.stdout)
 
     list_installed_packages()
-    
+
     try:
         filelist = file.split('(')
         filenumber = filelist[-1]
@@ -76,7 +76,7 @@ if __name__ == "__main__":
 
     with FunctionExecutor(runtime='book-mentat-runtime') as fexec:
         filepath = 'books/Calibre Library/'
-        print(filepath)
+        print("READING:", filepath)
         #f = fexec.call_async(process_pdf, filetest)
         #print(f.result())
         spdfl = Storage()
