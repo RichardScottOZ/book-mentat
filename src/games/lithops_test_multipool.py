@@ -94,5 +94,7 @@ if __name__ == "__main__":
         try:
             result = async_result.get()
             print(result)
-        except TimeoutError:
-            print("Timed out!")        
+        #except TimeoutError:
+            #print("Timed out!")        
+        except Exception as poolE:
+            print(poolE)                   
