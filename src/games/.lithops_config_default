@@ -8,6 +8,7 @@ aws_lambda:
     region: us-west-2
     runtime: book-mentat-runtime
     runtime_memory: 1280
+    runtime_timeout: 900
 
 aws:
     region: us-west-2
