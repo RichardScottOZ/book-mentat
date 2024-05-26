@@ -88,6 +88,6 @@ if __name__ == "__main__":
 
         print(plist[0:3])
 
-    fexec2 = lithops.FunctionExecutor()
+    fexec2 = FunctionExecutor()
     fexec2.map(process_pdf, plist)
     print (fexec2.get_result(throw_except=False))
