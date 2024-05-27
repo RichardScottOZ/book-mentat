@@ -278,6 +278,7 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 - /tmp is writeable in container
 
 - Batch needs a service role that can do ECS
+- also a job Role https://github.com/lithops-cloud/lithops/issues/1359
 
 # possibly
 -  Set the LD_LIBRARY_PATH environment variable
