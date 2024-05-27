@@ -2,15 +2,26 @@ lithops:
     backend: aws_batch
 
 aws_batch:
-    region : <REGION_NAME>
-    execution_role: <EXECUTION_ROLE_ARN>
-    instance_role: <INSTANCE_ROLE_ARN>
+    region : us-west-2
+    assign_public_ip: true
+    execution_role: arn:aws:iam::958539196701:role/ecsTaskExecutionRoleLithops
+    instance_role: arn:aws:iam::958539196701:role/ecsInstanceRolelithops
     job_role: arn:aws:iam::691987788901:role/ecsTaskJobRole
     subnets:
-        - <SUBNET_ID_1>
-        - <SUBNET_ID_2>
-        - ...
+        - subnet-70515309
+        - subnet-4ad6fa01
+        - subnet-4a342910
+        - subnet-bd069396
     security_groups:
-        - <SECURITY_GROUP_1>
-        - <SECURITY_GROUP_2>
-        - ...
+        - sg-0eabf99e212627078
+    runtime: book-mentat-runtime-batch:01
+    runtime_memory: 2048
+    worker_processes: 1
+    container_vcpus: 1
+    service_role: None
+    env_total_cpus: 10
+    env_type: FARGATE_SPOT
+
+
+aws_s3:
+    storage_bucket: lithopsdata
