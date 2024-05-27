@@ -5,6 +5,7 @@ aws_batch:
     region : <REGION_NAME>
     execution_role: <EXECUTION_ROLE_ARN>
     instance_role: <INSTANCE_ROLE_ARN>
+    job_role: arn:aws:iam::691987788901:role/ecsTaskJobRole
     subnets:
         - <SUBNET_ID_1>
         - <SUBNET_ID_2>
