@@ -43,6 +43,7 @@ def process_pdf(file):
                 filenumber = match
                 break
         else:
+            print("BADNUMBERNOGOOD:",file)
             return
 
     newfile = file + '_' + filenumber + '.pkl'
