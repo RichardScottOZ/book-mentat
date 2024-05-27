@@ -1,0 +1,15 @@
+lithops:
+    backend: aws_batch
+
+aws_batch:
+    region : <REGION_NAME>
+    execution_role: <EXECUTION_ROLE_ARN>
+    instance_role: <INSTANCE_ROLE_ARN>
+    subnets:
+        - <SUBNET_ID_1>
+        - <SUBNET_ID_2>
+        - ...
+    security_groups:
+        - <SECURITY_GROUP_1>
+        - <SECURITY_GROUP_2>
+        - ...
