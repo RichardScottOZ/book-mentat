@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
         libfontconfig1 \       
         poppler-utils \
         tesseract-ocr \
-        libtesseract-dev         
+        libtesseract-dev \        
         && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade --ignore-installed setuptools six pip \
