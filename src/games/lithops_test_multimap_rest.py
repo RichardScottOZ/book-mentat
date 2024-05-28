@@ -148,7 +148,7 @@ if __name__ == "__main__":
                 plist.append(f['Key'])
 
             print(plist[0:3])
-
+    #need to change timeout
     fexec2 = FunctionExecutor()
     fexec2.map(process_pdf, plist[int(arg1):int(arg2)])
     print (fexec2.get_result(throw_except=False))
