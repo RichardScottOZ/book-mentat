@@ -8,6 +8,19 @@ from pdf_reader import get_elements_from_pdf
 import pickle
 from lithops.multiprocessing import Pool
 
+import sys
+
+# Print the command-line arguments
+print("Arguments passed:", sys.argv)
+
+# Access individual arguments
+if len(sys.argv) > 1:
+    arg1 = sys.argv[1]
+    print("Argument 1:", arg1)
+if len(sys.argv) > 2:
+    arg2 = sys.argv[2]
+    print("Argument 2:", arg2)
+
 def process_pdf(file):
     print("FILE BEING PROCESSED:",file)
     from pdf_reader import get_elements_from_pdf
@@ -102,6 +115,6 @@ if __name__ == "__main__":
         print(plist[0:3])
 
     fexec2 = FunctionExecutor()
-    fexec2.map(process_pdf, plist[0:733])
+    fexec2.map(process_pdf, plist[arg1:arg2])
     print (fexec2.get_result(throw_except=False))
 
