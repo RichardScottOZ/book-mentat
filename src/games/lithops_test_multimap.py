@@ -115,6 +115,6 @@ if __name__ == "__main__":
         print(plist[0:3])
 
     fexec2 = FunctionExecutor()
-    fexec2.map(process_pdf, plist[arg1:arg2])
+    fexec2.map(process_pdf, plist[int(arg1):int(arg2)])
     print (fexec2.get_result(throw_except=False))
 
