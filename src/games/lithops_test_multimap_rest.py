@@ -141,14 +141,16 @@ if __name__ == "__main__":
             newfile = file + '_' + filenumber + '.pkl'
 
             if cloudos.path.exists( cloudos.path.join(output_path,cloudos.path.basename(newfile)) ):
-                print("SKIPPING:",file, filenumber)
+                #print("SKIPPING:",file, filenumber)
                 continue
 
             else:
+                print("NEED TO DO:",file, filenumber)
                 plist.append(f['Key'])
 
             print(plist[0:3])
     #need to change timeout
+    #write not done to a file to read from there
     fexec2 = FunctionExecutor()
     fexec2.map(process_pdf, plist[int(arg1):int(arg2)])
     print (fexec2.get_result(throw_except=False))
