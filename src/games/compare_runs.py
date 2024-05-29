@@ -14,6 +14,6 @@ for local in l:
             break   
 
     if not found:
-        print(l)
+        print(local)
 
    
