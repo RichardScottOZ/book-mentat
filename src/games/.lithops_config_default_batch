@@ -4,16 +4,16 @@ lithops:
 aws_batch:
     region : us-west-2
     assign_public_ip: true
-    execution_role: arn:aws:iam::958539196701:role/ecsTaskExecutionRoleLithops
-    instance_role: arn:aws:iam::958539196701:role/ecsInstanceRolelithops
-    job_role: arn:aws:iam::691987788901:role/ecsTaskJobRole
+    execution_role: arn:aws:iam::9:role/ecsTaskExecutionRoleLithops
+    instance_role: arn:aws:iam::9:role/ecsInstanceRolelithops
+    job_role: arn:aws:iam::6:role/ecsTaskJobRole
     subnets:
-        - subnet-70515309
-        - subnet-4ad6fa01
-        - subnet-4a342910
-        - subnet-bd069396
+        - subnet-7
+        - subnet-4
+        - subnet-4
+        - subnet-b
     security_groups:
-        - sg-0eabf99e212627078
+        - sg-0
     runtime: book-mentat-runtime-batch:01
     runtime_memory: 2048
     worker_processes: 1

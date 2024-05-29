@@ -139,8 +139,12 @@ if __name__ == "__main__":
                     #return
 
             newfile = file + '_' + filenumber + '.pkl'
+            errorfile = file + '_' + filenumber + '.error'
 
             if cloudos.path.exists( cloudos.path.join(output_path,cloudos.path.basename(newfile)) ):
+                #print("SKIPPING:",file, filenumber)
+                continue
+            if cloudos.path.exists( cloudos.path.join(output_path,cloudos.path.basename(errorfile)) ):
                 #print("SKIPPING:",file, filenumber)
                 continue
 
