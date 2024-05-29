@@ -28,7 +28,8 @@ for local in l:
 
     if not found:
         print(local)
+        print('lithops-data-books', key=output_path + '/' + local.replace(r'\\n','').strip())
 
-        spdf.upload_file(input_path + '/' + local.replace(r'\\n','').strip(), 'lithops-data-books', key=output_path + '/' + local.replace(r'\\n','').strip())
+        #spdf.upload_file(input_path + '/' + local.replace(r'\\n','').strip(), 'lithops-data-books', key=output_path + '/' + local.replace(r'\\n','').strip())
 
    
