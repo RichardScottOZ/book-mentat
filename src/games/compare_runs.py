@@ -9,7 +9,7 @@ with open('/home/richard/cloudout.txt') as fl:
 for local in l:
     found = False
     for cloud in c:
-        if l in c:
+        if local in cloud:
             found = True
             break   
 
