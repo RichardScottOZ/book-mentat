@@ -9,7 +9,7 @@ import pickle
 spdf = Storage()
 
 output_path = "games/parseenumber"
-input_path = "/home/richard"
+input_path = "/mnt/usb_mount"
 
 ## check cloud and local
 
