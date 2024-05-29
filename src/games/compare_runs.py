@@ -1,9 +1,9 @@
 ## check cloud and local
 
-with open('/home/richard/local.txt') as fl:
+with open('/home/richard/localout.txt') as fl:
     l = fl.readlines()
 
-with open('/home/richard/cloud.txt') as fl:
+with open('/home/richard/cloudout.txt') as fl:
     c = fl.readlines()
 
 for local in l:
