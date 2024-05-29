@@ -255,6 +255,8 @@ At the end of the installation process, apt displays an error due to installing 
 
 N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 ```
+- it has two timeouts - a runtime_timeout
+- execution_timeout - in lithops section
 
 ### Build
 - lithops runtime build -f MyDockerfile -b aws_lambda my-container-runtime-name
