@@ -50,11 +50,8 @@ for local in l:
 
     if not found:
         print(local)
-        print('lithops-data-books' + output_path + '/' + local.replace(r'\\n','').strip())
+        
         upload_file = input_path + '/' + local.replace(r'\\n','').strip()
-
-        us = spdf.upload_file(upload_file, 'lithops-data-book', key=output_path + '/' + local.replace(r'\\n','').strip())
-        print(us)
-
+        print(upload_file)
         # Example usage
         upload_to_s3(upload_file, 'lithops-data-books', output_path + '/' + local.replace(r'\\n','').strip())
