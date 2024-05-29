@@ -1,3 +1,15 @@
+import os
+import subprocess
+from lithops import FunctionExecutor
+from lithops.storage.cloud_proxy import os as cloudos, open as cloudopen
+from lithops import Storage
+
+import pickle
+
+spdf = Storage()
+
+output_path = "games/parseenumber"
+
 ## check cloud and local
 
 with open('/home/richard/localout.txt') as fl:
@@ -15,5 +27,7 @@ for local in l:
 
     if not found:
         print(local)
+
+        spdf.upload_file('/home/richard' + '/' + local, 'lithops-data-books', key=output_path + '/' + local)
 
    
