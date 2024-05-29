@@ -152,7 +152,7 @@ if __name__ == "__main__":
                 print("NEED TO DO:",file, filenumber)
                 plist.append(f['Key'])
 
-            print(plist[0:3])
+            #print(plist[0:3])
             print("TOTAL TO DO:",len(plist))
     #need to change timeout
     #write not done to a file to read from there
