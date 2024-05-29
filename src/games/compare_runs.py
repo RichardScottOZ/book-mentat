@@ -9,6 +9,7 @@ import pickle
 spdf = Storage()
 
 output_path = "games/parseenumber"
+input_path = "/home/richard"
 
 ## check cloud and local
 
@@ -28,6 +29,6 @@ for local in l:
     if not found:
         print(local)
 
-        spdf.upload_file('/home/richard' + '/' + local, 'lithops-data-books', key=output_path + '/' + local)
+        spdf.upload_file(input_path + '/' + local, 'lithops-data-books', key=output_path + '/' + local)
 
    
