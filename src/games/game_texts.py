@@ -11,7 +11,7 @@ if not os.path.exists(output_path):
 
 for root, dirs, files in os.walk(input_path):
     for file in files:
-        if '.pkl' not in file:
+        if '.pkl' not in file or '.log' in file or '.error' in file:
             continue
 
         print("Processing:", file)
