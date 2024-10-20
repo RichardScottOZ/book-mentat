@@ -15,5 +15,5 @@ with open(os.path.join(output_path,file),'rb') as f:
 
 for idx, e in enumerate(elements):
     print(dir(e))
-    print("KEYS:",e.keys())
+    #print("KEYS:",e.keys())
     print("INDEX:",idx, e)    
