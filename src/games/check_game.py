@@ -13,5 +13,5 @@ file = r"Mothership - What We Give To Al - Andrew D. O'Brien.pdf_26097.pkl"
 with open(os.path.join(output_path,file),'rb') as f:
     elements = pickle.load(f)
 
-for e in elements:
-    print(e)    
+for idx, e in enumerate(elements):
+    print("INDEX:",idx, e)    
