@@ -16,7 +16,7 @@ with open(os.path.join(output_path,file),'rb') as f:
 for idx, e in enumerate(elements):
     print(dir(e))
     print("INDEX:",idx, e)    
-    print("LEN:",len(e))
+    
     #print(e.paragraphs)
     #for i, ee in e.elements:
         #print("index:",i, ee)
