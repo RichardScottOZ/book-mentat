@@ -17,4 +17,6 @@ for idx, e in enumerate(elements):
     #print(dir(e))
     print("INDEX:",idx, e)    
 
-    print(e.paragraphs)
+    #print(e.paragraphs)
+    for i, ee in e:
+        print("index:",i ee)
