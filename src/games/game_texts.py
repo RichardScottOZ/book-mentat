@@ -3,7 +3,7 @@ from pdf_reader import get_elements_from_pdf
 #
 import pickle
 
-input_path = "/mnt/usb_mount/books/Calibre Library"
+input_path = "/mnt/usb_mount/games/parseenumber"
 output_path = "/mnt/usb_mount/games/parseenumber_test"
 
 if not os.path.exists(output_path):
