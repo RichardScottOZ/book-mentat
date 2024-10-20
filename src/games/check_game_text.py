@@ -20,6 +20,6 @@ for idx, e in enumerate(elements):
     print("INDEX:",e.index)
     print("ELEMENTS:",e.elements)
     print("PARAGRAPHS:",e.paragraphs)
-    rint("SIZE:",e.size)
+    print("SIZE:",e.size)
     #for i, ee in e.elements:
         #print("index:",i, ee)
