@@ -12,7 +12,7 @@ from llama_index.core import SimpleDirectoryReader
 input_path = " /mnt/usb_mount/games/parseenumber_test"
 #input_path="test"
 
-print("LOADING CALIBRE BOOKS in epub")
+print("LOADING CALIBRE GAMES in text")
 
 loader = SimpleDirectoryReader(
     input_dir=input_path,
