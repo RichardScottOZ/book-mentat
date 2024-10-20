@@ -19,9 +19,10 @@ for idx, e in enumerate(elements):
     
     print("INDEX:",e.index)
     print("ELEMENTS:",e.elements)
+    ban = e.elements
     print("PARAGRAPHS:",e.paragraphs)
     print("SIZE:",e.size)
     
     print(type(e.elements),len(e.elements))
-    for i, ee in e.elements:
+    for i, ee in ban:
         print("index:",i, ee)
