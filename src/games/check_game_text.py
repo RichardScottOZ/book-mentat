@@ -21,5 +21,6 @@ for idx, e in enumerate(elements):
     print("ELEMENTS:",e.elements)
     print("PARAGRAPHS:",e.paragraphs)
     print("SIZE:",e.size)
-    #for i, ee in e.elements:
-        #print("index:",i, ee)
+    
+    for i, ee in e.elements:
+        print("index:",i, ee)
