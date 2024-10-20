@@ -18,5 +18,5 @@ for idx, e in enumerate(elements):
     print("INDEX:",idx, e)    
 
     #print(e.paragraphs)
-    for i, ee in e:
+    for i, ee in e.elements:
         print("index:",i, ee)
