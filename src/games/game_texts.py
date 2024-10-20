@@ -11,6 +11,9 @@ if not os.path.exists(output_path):
 
 for root, dirs, files in os.walk(input_path):
     for file in files:
+        if '.pkl' not in file:
+            continue
+            
         print("Processing:", file)
         with open(os.path.join(root,file),'rb') as f:
             elements = pickle.load(f)
