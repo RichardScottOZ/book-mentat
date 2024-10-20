@@ -24,5 +24,6 @@ for idx, e in enumerate(elements):
     print("SIZE:",e.size)
     
     print(type(e.elements),len(e.elements))
-    for i, ee in ban:
-        print("index:",i, ee)
+    for i in range(len(e.elements)):
+        print("ELEMENT:",i,e.elements[i])
+        #print("index:",i, ee)
