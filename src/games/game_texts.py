@@ -13,7 +13,7 @@ for root, dirs, files in os.walk(input_path):
     for file in files:
         if '.pkl' not in file:
             continue
-            
+
         print("Processing:", file)
         with open(os.path.join(root,file),'rb') as f:
             elements = pickle.load(f)
@@ -22,4 +22,4 @@ for root, dirs, files in os.walk(input_path):
 
             for idx, e in enumerate(elements):
 
-                fo.writelines(e.paragraphs)
+                fo.writelines(str(e.paragraphs))
