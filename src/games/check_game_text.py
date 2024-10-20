@@ -19,4 +19,4 @@ for idx, e in enumerate(elements):
 
     #print(e.paragraphs)
     for i, ee in e:
-        print("index:",i ee)
+        print("index:",i, ee)
