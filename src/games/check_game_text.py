@@ -14,9 +14,9 @@ with open(os.path.join(output_path,file),'rb') as f:
     elements = pickle.load(f)
 
 for idx, e in enumerate(elements):
-    #print(dir(e))
+    print(dir(e))
     print("INDEX:",idx, e)    
 
     #print(e.paragraphs)
-    for i, ee in e.elements:
-        print("index:",i, ee)
+    #for i, ee in e.elements:
+        #print("index:",i, ee)
