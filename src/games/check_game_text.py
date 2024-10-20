@@ -14,5 +14,6 @@ with open(os.path.join(output_path,file),'rb') as f:
     elements = pickle.load(f)
 
 for idx, e in enumerate(elements):
+    print(dir(e))
     print("KEYS:",e.keys())
     print("INDEX:",idx, e)    
