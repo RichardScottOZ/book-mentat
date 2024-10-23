@@ -2,7 +2,7 @@ import sys
 
 model = sys.argv[1]
 strq = sys.argv[2]
-print("mode:",model,"query:",strq)
+print("model:",model,"query:",strq)
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
