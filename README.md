@@ -155,6 +155,8 @@ Here is some troubleshooting steps that will hopefully help:
 Stop the background service: 
 ```bash
 sudo systemctl stop ollama
+
+ollama serve  #to restart
 ```
 
 Run lsof as sudo to rule out permissions issues: 
