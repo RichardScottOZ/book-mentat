@@ -13,7 +13,7 @@ from llama_index.llms.ollama import Ollama
 
 embedding_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
-chroma_path = "/mnt/usb_mount/chroma/Calibre Books"
+chroma_path = "/mnt/usb_mount/chroma/Calibre Games"
 collection_name = "calibrebooks"
 
 # note on custom embed class to get around signature error
