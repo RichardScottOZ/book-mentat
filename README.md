@@ -283,7 +283,10 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 
 - Batch needs a service role that can do ECS
 - also a job Role https://github.com/lithops-cloud/lithops/issues/1359
-- Choose Elastic Container Service on the use case list and then click on Elastic Container Service Task. Click Next: Permissions. Select the policy created before (lithops-policy). Click Next: Tags and Next: Review. Type a role name, for example ecsTaskJobRole. Click on Create Role.
+- Choose Elastic Container Service on the use case list and then click on Elastic Container Service Task.
+    - Click Next: Permissions. Select the policy created before (lithops-policy).
+    - Click Next: Tags and Next: Review.
+    - Type a role name, for example ecsTaskJobRole. Click on Create Role.
 
 # possibly
 -  Set the LD_LIBRARY_PATH environment variable
