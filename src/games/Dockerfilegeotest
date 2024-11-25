@@ -1,0 +1,1 @@
+runtime build geotest:01 -f Dockerfile -b aws_batch
