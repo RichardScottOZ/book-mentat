@@ -274,12 +274,19 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
     - suggestions https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo
 - so good questions?
 - other solutions
-- pip install opencv-contrib-python
+-
+- ```python
+  pip install opencv-contrib-python
+  ```
 - install opencv-contrib-python rather than opencv-python.
 - https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo
-- At one point, I used opencv-python-headless which worked for my case with FastAPI when I deployed on Heroku once. What's the 
+- At one point, I used opencv-python-headless which worked for my case with FastAPI when I deployed on Heroku once. What's the
+- ```python
 - pip install -U opencv-python
-- apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libg
+- ```
+-  ```bash
+   apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libg
+   ```
 - runtime memory you can adjust in .lithops_config for pool
 - /tmp is writeable in container
 
@@ -298,7 +305,9 @@ ENV LD_LIBRARY_PATH="/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
 
 
 ### Docker
-- docker system prune --all --force  
+- ```bash
+  docker system prune --all --force
+  ```
 
 ### Failures
 - https://github.com/lithops-cloud/lithops/issues/1248
