@@ -200,7 +200,9 @@ sudo lsof -i :11434
 ## Parsee pdf
 - https://github.com/parsee-ai/parsee-pdf-reader
 - pdf reader conflicts
-- Installing collected packages: pytesseract, pypdf, pycparser, pdf2image, opencv-python, cffi, cryptography, pdfminer-six, parsee-pdf-reader
+-
+ ```python
+Installing collected packages: pytesseract, pypdf, pycparser, pdf2image, opencv-python, cffi, cryptography, pdfminer-six, parsee-pdf-reader
   Attempting uninstall: pypdf
     Found existing installation: pypdf 4.2.0
     Uninstalling pypdf-4.2.0:
@@ -208,7 +210,7 @@ sudo lsof -i :11434
 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
 llama-index-readers-file 0.1.20 requires pypdf<5.0.0,>=4.0.1, but you have pypdf 3.17.4 which is incompatible.
 Successfully installed cffi-1.16.0 cryptography-42.0.7 opencv-python-4.9.0.80 parsee-pdf-reader-0.1.5.8 pdf2image-1.17.0 pdfminer-six-20221105 pycparser-2.22 pypdf-3.17.4 pytesseract-0.3.10
-
+```
 
 # Metadata
 - could use isfdb database dumps
