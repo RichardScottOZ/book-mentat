@@ -292,7 +292,10 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/doc
 
 # possibly
 -  Set the LD_LIBRARY_PATH environment variable
- ENV LD_LIBRARY_PATH="/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+```bash
+ENV LD_LIBRARY_PATH="/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+```
+
 
 ### Docker
 - docker system prune --all --force  
